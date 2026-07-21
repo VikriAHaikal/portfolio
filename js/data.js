@@ -14,21 +14,21 @@ const DATA = {
     email:    'vikrianalda@gmail.com',
     phone:    '+6282113745361',           // Set null untuk sembunyikan tombol WA
     location: 'Sukabumi, Jawa Barat, Indonesia',
-    cvUrl:    'public/cv/Vikri_Resume.pdf', // Taruh file PDF di public/cv/
+    cvUrl:    'public/cv/CV_Vikri_A_Haikal.pdf', // Taruh file PDF di public/cv/
     formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID', // Ganti dengan endpoint kamu
     socials: {
       github:   'https://github.com/VikriAHaikal',
       linkedin: 'https://www.linkedin.com/in/vikriahaikal',
     },
     roles: [ // Teks yang berputar di hero
-      'Junior Fullstack Developer',
-      'Associate Data Analyst',
-      'Machine Learning Enthusiast',
-      'Project Manager',
+      'Software Engineer',
+      'Fullstack Web Developer',
+      'Machine Learning Specialist',
+      'AI Enthusiast',
     ],
     heroSubtitle: {
-      en: 'Building functional digital solutions — from web development to data analytics. Certified Associate Data Analyst.',
-      id: 'Membangun solusi digital yang fungsional — dari web development hingga data analytics. Certified Associate Data Analyst.',
+      en: 'Software engineering and Machine Learning graduate dedicated to building innovative software solutions and intelligent systems.',
+      id: 'Lulusan software engineering dan Machine Learning yang berdedikasi membangun solusi perangkat lunak inovatif dan sistem cerdas.',
     },
   },
 
@@ -60,10 +60,9 @@ const DATA = {
     },
   },
 
-  // ─── About ────────────────────────────────────────────────────────────────
   about: {
-    en: "I'm a passionate Junior Fullstack Developer and Certified Associate Data Analyst from Sukabumi, Indonesia. I enjoy building functional web applications and extracting meaningful insights from data. With hands-on experience in frontend, backend, and machine learning, I'm eager to contribute to innovative teams and real-world projects.",
-    id: 'Saya adalah Junior Fullstack Developer dan Certified Associate Data Analyst dari Sukabumi, Indonesia. Saya menyukai membangun aplikasi web yang fungsional dan mengekstrak wawasan bermakna dari data. Dengan pengalaman di frontend, backend, dan machine learning, saya siap berkontribusi dalam tim yang inovatif.',
+    en: "A Bachelor's graduate from Universitas Serang Raya with a GPA of 3.84, possessing a deep interest in Machine Learning, Artificial Intelligence, and software development. Equipped with practical experience through Independent Study at Bangkit Academy and IDCamp training by Dicoding. Committed to applying technical expertise to create innovative solutions in today's industry.",
+    id: "Seorang lulusan S1 dari Universitas Serang Raya dengan IPK 3,84 yang memiliki ketertarikan mendalam di bidang Machine Learning, Artificial Intelligence, dan pengembangan perangkat lunak. Memiliki pengalaman praktis melalui Studi Independen di Bangkit Academy dan pelatihan IDCamp dari Dicoding. Berkomitmen untuk menerapkan keahlian teknis dalam menciptakan solusi inovatif di era industri saat ini.",
   },
 
   // ─── Experience ───────────────────────────────────────────────────────────
@@ -91,7 +90,7 @@ const DATA = {
     {
       role:    { en: 'Secretary General', id: 'Sekretaris Umum' },
       company: 'HIMATIF — Himpunan Mahasiswa Teknik Informatika',
-      period:  '2023 – Sekarang',
+      period:  '2023 – 2024',
       tags:    ['Leadership', 'Administration', 'Communication', 'Coordination'],
       desc: {
         en: 'Managed organizational administration, meeting documentation, official correspondence, inter-division coordination, and served as liaison between management and members.',
@@ -109,7 +108,7 @@ const DATA = {
         id: 'Aplikasi mobile untuk memindai tabel nutrisi minuman kemasan guna memantau asupan gula secara real-time. Memimpin tim beranggotakan 6 orang, mengelola backend di GCP, serta integrasi model TensorFlow Lite.',
       },
       tags:      ['TensorFlow Lite', 'Google Cloud Platform', 'Python', 'Android Dev'],
-      githubUrl: 'https://github.com/VikriAHaikal',
+      githubUrl: 'https://github.com/VikriAHaikal/Capstone',
       demoUrl:   null,
     },
     {
