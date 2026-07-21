@@ -1,12 +1,12 @@
-/* ==========================================================================
-   PORTFOLIO — style.css
+﻿/* ==========================================================================
+   PORTFOLIO â€” style.css
    Clean, minimalist design system for job application portfolio
    ========================================================================== */
 
-/* ── Google Fonts ── */
+/* â”€â”€ Google Fonts â”€â”€ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* ── Design Tokens ─────────────────────────────────────────────────────── */
+/* â”€â”€ Design Tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
   /* Colors - Light Mode */
   --bg:           #ffffff;
@@ -63,7 +63,7 @@
   --shadow-lg:  0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* ── Reset ─────────────────────────────────────────────────────────────── */
+/* â”€â”€ Reset â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
 body {
@@ -81,7 +81,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 input, textarea { font-family: inherit; }
 ul { list-style: none; }
 
-/* ── Scroll Progress ────────────────────────────────────────────────────── */
+/* â”€â”€ Scroll Progress â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .scroll-progress {
   position: fixed;
   top: 0; left: 0;
@@ -91,7 +91,7 @@ ul { list-style: none; }
   transition: width 0.1s linear;
 }
 
-/* ── Layout Utilities ───────────────────────────────────────────────────── */
+/* â”€â”€ Layout Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .container {
   width: 100%;
   max-width: var(--max-w);
@@ -138,7 +138,7 @@ ul { list-style: none; }
   font-size: 1rem;
 }
 
-/* ── Scroll Animations ──────────────────────────────────────────────────── */
+/* â”€â”€ Scroll Animations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -149,7 +149,7 @@ ul { list-style: none; }
   transform: translateY(0);
 }
 
-/* ── Buttons ────────────────────────────────────────────────────────────── */
+/* â”€â”€ Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -187,7 +187,7 @@ ul { list-style: none; }
 
 .btn-full { width: 100%; justify-content: center; }
 
-/* ── Navbar ─────────────────────────────────────────────────────────────── */
+/* â”€â”€ Navbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -290,7 +290,7 @@ ul { list-style: none; }
 .lang-sep { color: var(--border-hover); font-weight: 300; }
 .lang-opt.active { color: var(--accent); }
 
-/* Mobile menu toggle — hidden on desktop */
+/* Mobile menu toggle â€” hidden on desktop */
 .mobile-menu-btn { display: none; }
 
 /* Mobile Navigation */
@@ -314,7 +314,7 @@ ul { list-style: none; }
   .mobile-menu-btn { display: flex; }
 }
 
-/* ── Hero Section ───────────────────────────────────────────────────────── */
+/* â”€â”€ Hero Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-section {
   min-height: 100vh;
   padding-top: calc(var(--nav-h) + 48px);
@@ -467,7 +467,7 @@ ul { list-style: none; }
   .hero-subtitle { margin: 0 auto 32px; }
 }
 
-/* ── About Section ──────────────────────────────────────────────────────── */
+/* â”€â”€ About Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .about-text {
   font-size: 1.05rem;
   color: var(--text-muted);
@@ -477,7 +477,7 @@ ul { list-style: none; }
   padding-left: 24px;
 }
 
-/* ── Timeline (Education & Experience) ──────────────────────────────────── */
+/* â”€â”€ Timeline (Education & Experience) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -610,7 +610,7 @@ ul { list-style: none; }
   .timeline-dot { display: none; }
 }
 
-/* ── Projects ───────────────────────────────────────────────────────────── */
+/* â”€â”€ Projects â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -679,310 +679,7 @@ ul { list-style: none; }
 .project-link:hover { color: var(--accent); }
 .project-link-demo { color: var(--accent); }
 
-/* ── Skills ─────────────────────────────────────────────────────────────── */
-.skills-groups {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-.skill-group {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-}
-
-.skill-group-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  margin-bottom: 16px;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tag {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  padding: 4px 12px;
-  border-radius: var(--radius);
-  transition: color var(--t), border-color var(--t), background-color var(--t);
-}
-.skill-tag:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-bg);
-}
-
-/* ── Certificates ───────────────────────────────────────────────────────── */
-.cert-tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-}
-
-.cert-tab {
-  padding: 8px 20px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg-card);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all var(--t);
-}
-.cert-tab:hover { border-color: var(--accent); color: var(--accent); }
-.cert-tab.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
-}
-.cert-tab-count {
-  font-size: 0.7rem;
-  padding: 1px 7px;
-  border-radius: 9999px;
-  background: rgba(255,255,255,0.25);
-}
-.cert-tab:not(.active) .cert-tab-count {
-  background: var(--bg-alt);
-  color: var(--text-muted);
-}
-
-.cert-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-}
-
-.cert-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  transition: border-color var(--t), box-shadow var(--t);
-}
-.cert-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-sm);
-}
-
-.cert-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.4;
-  flex: 1;
-}
-
-.cert-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  border-top: 1px solid var(--border);
-  margin-top: auto;
-}
-
-.cert-year {
-  font-size: 0.78rem;
-  color: var(--text-subtle);
-  font-weight: 500;
-}
-
-.cert-link {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--accent);
-  transition: opacity var(--t);
-}
-.cert-link:hover { opacity: 0.75; }
-.cert-link[href="#"] { color: var(--text-subtle); pointer-events: none; }
-
-/* ── Contact Section ────────────────────────────────────────────────────── */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 48px;
-  align-items: start;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.contact-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.contact-icon {
-  width: 40px; height: 40px;
-  border-radius: var(--radius);
-  background: var(--accent-bg);
-  border: 1px solid rgba(37,99,235,0.15);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-.contact-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--text-subtle);
-  margin-bottom: 4px;
-}
-
-.contact-value {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  word-break: break-all;
-}
-a.contact-value:hover { color: var(--accent); }
-
-.contact-email-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.contact-wa {
-  color: #16a34a;
-  font-weight: 500;
-}
-.contact-wa:hover { color: #15803d; }
-
-.copy-btn {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--accent);
-  padding: 2px 10px;
-  border-radius: 9999px;
-  border: 1px solid var(--accent);
-  transition: background-color var(--t);
-}
-.copy-btn:hover { background: var(--accent-bg); }
-
-.contact-socials {
-  display: flex;
-  gap: 12px;
-  padding-top: 8px;
-}
-.contact-socials .social-link {
-  display: flex; align-items: center; gap: 8px;
-  width: auto; padding: 6px 14px;
-  font-size: 0.85rem; font-weight: 500;
-}
-
-/* Contact Form */
-.contact-form-wrap {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  padding: 32px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px 14px;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  color: var(--text);
-  font-size: 0.9rem;
-  transition: border-color var(--t), box-shadow var(--t);
-  resize: vertical;
-}
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--text-subtle); }
-.form-group input:disabled,
-.form-group textarea:disabled { opacity: 0.5; }
-
-.form-success {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 12px;
-  padding: 40px 20px;
-  min-height: 280px;
-}
-.form-success h3 {
-  font-size: 1.3rem; font-weight: 700;
-}
-.form-success p {
-  color: var(--text-muted); font-size: 0.9rem;
-}
-
-.form-error-msg {
-  font-size: 0.82rem;
-  color: var(--error);
-  padding: 8px 12px;
-  border-radius: var(--radius);
-  background: rgba(220,38,38,0.08);
-  border: 1px solid rgba(220,38,38,0.2);
-  display: none;
-}
-.form-error-msg.show { display: block; }
-
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .contact-form-wrap { padding: 24px; }
-}
-
-/* ── Footer ─────────────────────────────────────────────────────────────── */
+/* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .footer {
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
@@ -1001,7 +698,7 @@ a.contact-value:hover { color: var(--accent); }
   color: var(--text-subtle);
 }
 
-/* ── Scroll to top ──────────────────────────────────────────────────────── */
+/* â”€â”€ Scroll to top â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .scroll-top-btn {
   position: fixed;
   bottom: 28px; right: 28px;
@@ -1018,4 +715,188 @@ a.contact-value:hover { color: var(--accent); }
 }
 .scroll-top-btn.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .scroll-top-btn:hover { background: var(--accent-hover); }
-.scroll-top-btn svg { width: 18px; height: 18px; }
+
+/* ==========================================================================
+   CONTACT — Simple Layout (no form)
+   ========================================================================== */
+.contact-simple-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+.contact-simple-heading {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-simple-heading::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.contact-simple-sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+.contact-email-btn {
+  font-size: 0.875rem;
+  padding: 12px 28px;
+}
+
+.contact-simple-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: border-color var(--t), box-shadow var(--t), transform var(--t);
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.contact-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card-icon--wa { background: rgba(22,163,74,0.1); color: #16a34a; }
+.contact-card-icon--li { background: rgba(10,102,194,0.1); color: #0a66c2; }
+.contact-card-icon--gh { background: var(--accent-bg); color: var(--accent); }
+
+[data-theme="dark"] .contact-card-icon--li { color: #5ba4d9; background: rgba(10,102,194,0.15); }
+
+.contact-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-card-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-subtle);
+}
+
+.contact-card-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-card-arrow {
+  color: var(--text-subtle);
+  flex-shrink: 0;
+  transition: color var(--t), transform var(--t);
+}
+.contact-card:hover .contact-card-arrow {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .contact-simple-wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .contact-simple-sub { max-width: 100%; }
+}
+
+/* ==========================================================================
+   SKILLS — Icon Grid (Devicons)
+   ========================================================================== */
+.skills-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 16px;
+}
+
+.skill-icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: default;
+  transition: border-color var(--t), box-shadow var(--t), transform var(--t);
+}
+
+.skill-icon-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.skill-icon-card i {
+  font-size: 2.2rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.skill-icon-card:hover i { transform: scale(1.15); }
+
+[data-theme="dark"] .skill-icon-card i.colored { color: var(--text-muted) !important; }
+
+.skill-icon-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .skills-icon-grid { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 12px; }
+  .skill-icon-card  { padding: 14px 8px; }
+  .skill-icon-card i { font-size: 1.8rem; }
+}

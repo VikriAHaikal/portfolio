@@ -35,60 +35,28 @@ const DATA = {
   // ─── i18n — Semua teks UI dalam dua bahasa ────────────────────────────────
   i18n: {
     en: {
-      nav: {
-        about: 'About', education: 'Education', experience: 'Experience',
-        projects: 'Projects', skills: 'Skills', certificates: 'Certificates', contact: 'Contact',
-      },
       hero: {
-        greeting: "Hi, I'm", available: 'Available for opportunities',
+        greeting: "Hi, I'm",
         downloadCV: 'Download CV', contactMe: 'Contact Me',
       },
-      about:        { title: 'About Me' },
-      education:    { title: 'Education', gpa: 'GPA', ongoing: 'Ongoing', graduated: 'Graduated' },
-      experience:   { title: 'Experience' },
-      projects:     { title: 'Projects', sourceCode: 'Source Code', liveDemo: 'Live Demo', private: '🔒 Private' },
-      skills:       { title: 'Skills & Tech Stack' },
-      certificates: { title: 'Certificates', viewCred: 'View Credential ↗' },
-      contact: {
-        title: 'Contact', subtitle: "Let's work together or just say hello!",
-        emailLabel: 'Email', locationLabel: 'Location', waLabel: 'WhatsApp',
-        waChat: 'Chat on WhatsApp', copy: 'Copy', copied: 'Copied!',
-        nameLabel: 'Name', msgLabel: 'Message',
-        namePh: 'Your name', emailPh: 'your@email.com', msgPh: 'How can I help you?',
-        send: 'Send Message', sending: 'Sending...',
-        successTitle: 'Message Sent!',
-        successMsg: "Thank you! I'll get back to you soon.",
-        errorMsg: 'Failed to send. Please email me directly.',
-      },
-      footer: { rights: 'All rights reserved.' },
+      about:      { title: 'About Me' },
+      experience: { title: 'Experience' },
+      projects:   { title: 'Projects', sourceCode: 'Source Code', liveDemo: 'Live Demo', private: '🔒 Private' },
+      skills:     { title: 'Skills & Tech Stack' },
+      contact:    { title: "Let's Connect", subtitle: 'Open for full-time roles, freelance projects, or just a good tech conversation.' },
+      footer:     { rights: 'All rights reserved.' },
     },
     id: {
-      nav: {
-        about: 'Tentang', education: 'Pendidikan', experience: 'Pengalaman',
-        projects: 'Proyek', skills: 'Keahlian', certificates: 'Sertifikat', contact: 'Kontak',
-      },
       hero: {
-        greeting: 'Hai, Saya', available: 'Terbuka untuk peluang kerja',
+        greeting: 'Hai, Saya',
         downloadCV: 'Unduh CV', contactMe: 'Hubungi Saya',
       },
-      about:        { title: 'Tentang Saya' },
-      education:    { title: 'Pendidikan', gpa: 'IPK', ongoing: 'Aktif', graduated: 'Lulus' },
-      experience:   { title: 'Pengalaman' },
-      projects:     { title: 'Proyek', sourceCode: 'Source Code', liveDemo: 'Live Demo', private: '🔒 Privat' },
-      skills:       { title: 'Keahlian & Tech Stack' },
-      certificates: { title: 'Sertifikat', viewCred: 'Lihat Kredensial ↗' },
-      contact: {
-        title: 'Kontak', subtitle: 'Ayo bekerja sama atau sekadar sapa!',
-        emailLabel: 'Email', locationLabel: 'Lokasi', waLabel: 'WhatsApp',
-        waChat: 'Chat via WhatsApp', copy: 'Salin', copied: 'Tersalin!',
-        nameLabel: 'Nama', msgLabel: 'Pesan',
-        namePh: 'Nama Anda', emailPh: 'email@anda.com', msgPh: 'Apa yang bisa saya bantu?',
-        send: 'Kirim Pesan', sending: 'Mengirim...',
-        successTitle: 'Pesan Terkirim!',
-        successMsg: 'Terima kasih! Saya akan segera menghubungi.',
-        errorMsg: 'Gagal mengirim. Silakan email saya langsung.',
-      },
-      footer: { rights: 'Hak cipta dilindungi.' },
+      about:      { title: 'Tentang Saya' },
+      experience: { title: 'Pengalaman' },
+      projects:   { title: 'Proyek', sourceCode: 'Source Code', liveDemo: 'Live Demo', private: '🔒 Privat' },
+      skills:     { title: 'Keahlian & Tech Stack' },
+      contact:    { title: 'Mari Terhubung', subtitle: 'Terbuka untuk pekerjaan penuh waktu, proyek freelance, atau sekadar ngobrol seputar teknologi.' },
+      footer:     { rights: 'Hak cipta dilindungi.' },
     },
   },
 
@@ -97,20 +65,6 @@ const DATA = {
     en: "I'm a passionate Junior Fullstack Developer and Certified Associate Data Analyst from Sukabumi, Indonesia. I enjoy building functional web applications and extracting meaningful insights from data. With hands-on experience in frontend, backend, and machine learning, I'm eager to contribute to innovative teams and real-world projects.",
     id: 'Saya adalah Junior Fullstack Developer dan Certified Associate Data Analyst dari Sukabumi, Indonesia. Saya menyukai membangun aplikasi web yang fungsional dan mengekstrak wawasan bermakna dari data. Dengan pengalaman di frontend, backend, dan machine learning, saya siap berkontribusi dalam tim yang inovatif.',
   },
-
-  // ─── Education ────────────────────────────────────────────────────────────
-  // Tambah lebih: copy satu objek, isi datanya.
-  education: [
-    {
-      institution: 'Universitas Serang Raya',
-      degree:      'S1 Teknik Informatika',
-      faculty:     'Fakultas Teknologi Informasi',     // null untuk sembunyikan
-      period:      '2021 – 2025',
-      gpa:         '3.84 / 4.00',        // null untuk sembunyikan
-      status:      'graduated',             // 'ongoing' | 'graduated'
-      description: 'Mendalami rekayasa perangkat lunak, kecerdasan buatan, dan analisis data. Aktif dalam organisasi kemahasiswaan dan berbagai kompetisi teknologi.',
-    },
-  ],
 
   // ─── Experience ───────────────────────────────────────────────────────────
   experience: [
@@ -146,100 +100,70 @@ const DATA = {
     },
   ],
 
-  // ─── Projects ─────────────────────────────────────────────────────────────
-  // ⚠ Ganti dengan proyek nyata kamu dari GitHub!
   projects: [
     {
-      name:     'Nama Proyek 1',
-      category: { en: 'Fullstack Web App', id: 'Aplikasi Web Fullstack' },
+      name:     "Drink't App — Nutrition Scanner",
+      category: { en: 'Machine Learning & IoT', id: 'Machine Learning & IoT' },
       desc: {
-        en: 'Describe your project here. What does it do, what problem does it solve, and what was your role?',
-        id: 'Deskripsikan proyek Anda di sini. Apa yang dilakukan, masalah apa yang diselesaikan, dan apa peran Anda?',
+        en: 'A mobile application that scans nutrition tables on packaged drinks to monitor sugar intake in real-time. Led a team of 6, managing backend deployment on GCP and integrating TensorFlow Lite model.',
+        id: 'Aplikasi mobile untuk memindai tabel nutrisi minuman kemasan guna memantau asupan gula secara real-time. Memimpin tim beranggotakan 6 orang, mengelola backend di GCP, serta integrasi model TensorFlow Lite.',
       },
-      tags:      ['React', 'Node.js', 'PostgreSQL', 'TypeScript'],
-      githubUrl: 'https://github.com/VikriAHaikal',
-      demoUrl:   null, // atau 'https://your-demo.vercel.app'
-    },
-    {
-      name:     'Nama Proyek 2',
-      category: { en: 'Data Analytics', id: 'Analisis Data' },
-      desc: {
-        en: 'Another project description. Focus on the impact, technology used, and what you learned.',
-        id: 'Deskripsi proyek lainnya. Fokus pada dampak, teknologi yang digunakan, dan apa yang dipelajari.',
-      },
-      tags:      ['Python', 'Pandas', 'Looker Studio', 'SQL'],
+      tags:      ['TensorFlow Lite', 'Google Cloud Platform', 'Python', 'Android Dev'],
       githubUrl: 'https://github.com/VikriAHaikal',
       demoUrl:   null,
+    },
+    {
+      name:     'Company Profile Web — Koperasi PT Adis',
+      category: { en: 'Web Development', id: 'Pengembangan Web' },
+      desc: {
+        en: 'Developed a dynamic and responsive company profile website for Koperasi Konsumen PT Adis Dimension Footwear, facilitating online presence and information dissemination for cooperative members.',
+        id: 'Mengembangkan website profil koperasi konsumen PT Adis Dimension Footwear yang dinamis dan responsif untuk mendukung kehadiran online dan penyebaran informasi kepada anggota koperasi.',
+      },
+      tags:      ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL'],
+      githubUrl: 'https://github.com/VikriAHaikal',
+      demoUrl:   null,
+    },
+    {
+      name:     'Minimalist Developer Portfolio',
+      category: { en: 'Frontend Web', id: 'Frontend Web' },
+      desc: {
+        en: 'A clean, lightweight, and fast personal developer portfolio. Built using semantic vanilla HTML5, custom CSS design tokens, and clean vanilla JS. Features dark/light mode and bilingual support.',
+        id: 'Website portfolio personal developer yang bersih, ringan, dan cepat. Dibangun menggunakan HTML5 semantik, custom CSS design tokens, dan JS vanilla. Dilengkapi dengan mode terang/gelap serta dukungan dua bahasa.',
+      },
+      tags:      ['HTML5', 'CSS3', 'JavaScript', 'Vanilla CSS', 'i18n'],
+      githubUrl: 'https://github.com/VikriAHaikal',
+      demoUrl:   'https://github.com/VikriAHaikal/portfolio',
     },
   ],
 
   // ─── Skills ───────────────────────────────────────────────────────────────
-  skillGroups: [
-    {
-      title:  { en: 'Frontend', id: 'Frontend' },
-      skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS', 'Bootstrap'],
-    },
-    {
-      title:  { en: 'Backend & Database', id: 'Backend & Database' },
-      skills: ['Node.js', 'Express', 'PHP', 'MySQL', 'PostgreSQL', 'Supabase', 'Firebase'],
-    },
-    {
-      title:  { en: 'Machine Learning & AI', id: 'Machine Learning & AI' },
-      skills: ['Python', 'TensorFlow', 'Keras', 'Jupyter Notebook', 'Google Colab', 'Google AI Studio'],
-    },
-    {
-      title:  { en: 'Tools & Platforms', id: 'Alat & Platform' },
-      skills: ['Git', 'GitHub', 'Docker', 'Postman', 'Vercel', 'Figma', 'VS Code', 'Notion', 'Looker Studio'],
-    },
-  ],
-
-  // ─── Certificates ─────────────────────────────────────────────────────────
-  certificatePlatforms: [
-    {
-      platform: 'Dicoding',
-      certs: [
-        { title: 'Memulai Dasar Pemrograman untuk Menjadi Pengembang Software', year: 'Mei 2024',  url: 'https://www.dicoding.com/certificates/JLX17D3OGX72' },
-        { title: 'Pengenalan ke Logika Pemrograman (Programming Logic 101)',     year: 'Mei 2024',  url: 'https://www.dicoding.com/certificates/RVZKRR55QPD5' },
-        { title: 'Belajar Dasar Git dengan GitHub',                             year: 'Mei 2024',  url: 'https://www.dicoding.com/certificates/L4PQ11KYOXO1' },
-        { title: 'Belajar Fundamental Analisis Data',                           year: 'Jun 2024',  url: 'https://www.dicoding.com/certificates/1OP8W2NRVXQK' },
-        { title: 'Belajar Dasar Visualisasi Data',                              year: 'Sep 2024',  url: 'https://www.dicoding.com/certificates/L4PQ1ORYQXO1' },
-        { title: 'Belajar Dasar Structured Query Language (SQL)',                year: 'Sep 2024',  url: 'https://www.dicoding.com/certificates/98XWL3J79ZM3' },
-        { title: 'Memulai Pemrograman dengan Python',                           year: 'Sep 2024',  url: 'https://www.dicoding.com/certificates/MRZME23JLPYQ' },
-        { title: 'Belajar Machine Learning untuk Pemula',                       year: 'Feb 2025',  url: 'https://www.dicoding.com/certificates/L4PQEQQN7PO1' },
-        { title: 'Belajar Dasar AI',                                            year: 'Okt 2025',  url: 'https://www.dicoding.com/certificates/NVP7J475OXR0' },
-        { title: 'Prompt Engineering untuk Software Developer',                 year: 'Okt 2025',  url: 'https://www.dicoding.com/certificates/JLX1545MNZ72' },
-        { title: 'Belajar Fundamental Deep Learning',                           year: 'Feb 2026',  url: 'https://www.dicoding.com/certificates/MEPJOR2KLZ3V' },
-        { title: 'Belajar Dasar Cloud dan Gen AI di AWS',                       year: 'Feb 2026',  url: 'https://www.dicoding.com/certificates/KEXLQ4JE0PG2' },
-        { title: 'Belajar Dasar Pemrograman JavaScript',                        year: 'Feb 2026',  url: 'https://www.dicoding.com/certificates/NVP7N148VZR0' },
-        { title: 'Belajar Back-End Pemula dengan JavaScript',                   year: 'Feb 2026',  url: 'https://www.dicoding.com/certificates/2VX30OW43XYQ' },
-        { title: 'Belajar Fundamental Generative AI',                           year: 'Apr 2026',  url: 'https://www.dicoding.com/certificates/KEXLQ72RWPG2' },
-        { title: 'Belajar Dasar Pemrograman Web',                               year: 'Jun 2026',  url: 'https://www.dicoding.com/certificates/KEXLQ684YPG2' },
-        { title: 'Belajar Membuat Front-End Web untuk Pemula',                  year: 'Jun 2026',  url: 'https://www.dicoding.com/certificates/72ZDJNY2JZYW' },
-        { title: 'Belajar Membuat Aplikasi Web dengan React',                   year: 'Jun 2026',  url: 'https://www.dicoding.com/certificates/MEPJODVNJZ3V' },
-      ],
-    },
-    {
-      platform: 'Coursera',
-      certs: [
-        { title: 'Crash Course on Python',                                           year: 'Feb 2024', url: 'https://coursera.org/share/da9391722c27321d82452debc2d57697' },
-        { title: 'Using Python to Interact with the Operating System',               year: 'Feb 2024', url: 'https://coursera.org/share/9e059e7dac7391ca1ee7c7656199094b' },
-        { title: 'Introduction to Git and GitHub',                                   year: 'Feb 2024', url: 'https://coursera.org/share/155ab969261630f5018789645cfa96af' },
-        { title: 'Process Data from Dirty to Clean',                                 year: 'Mar 2024', url: 'https://coursera.org/share/1fcf23a58faceec822b7da1e442c94d1' },
-        { title: 'Share Data Through the Art of Visualization',                      year: 'Mar 2024', url: 'https://coursera.org/share/ffec33d21809d6f32373920de57f2fab' },
-        { title: 'Analyze Data to Answer Questions',                                 year: 'Mar 2024', url: 'https://coursera.org/share/2df76c74cbd5162ffe4d963338af7315' },
-        { title: 'Mathematics for Machine Learning and Data Science Specialization',  year: 'Apr 2024', url: 'https://coursera.org/share/fbfcfe293aad43eb00eb2ae4798adadf' },
-        { title: 'Machine Learning Specialization',                                  year: 'Apr 2024', url: 'https://coursera.org/share/4e81cffc2fa2eb92c71288783fb3e384' },
-        { title: 'DeepLearning.AI TensorFlow Developer Professional Certificate',    year: 'Mei 2024', url: 'https://coursera.org/share/a5d424c671c9ccac3effc4cfe99c8553' },
-        { title: 'TensorFlow: Data and Deployment Specialization',                   year: 'Mei 2024', url: 'https://coursera.org/share/c9da23d3eda3996bea17716321747b8f' },
-        { title: 'TensorFlow: Advanced Techniques Specialization',                   year: 'Mei 2024', url: 'https://coursera.org/share/eb8e9fc532bb3bd5d430f086c40a7f77' },
-        { title: 'Introduction to HTML, CSS, & JavaScript',                          year: 'Jun 2025', url: 'https://coursera.org/share/04225b5ab52a3a4a1c666432fda6fce8' },
-      ],
-    },
-    {
-      platform: 'BNSP',
-      certs: [
-        { title: 'Sertifikat Kompetensi BNSP — Associate Data Analyst', year: '12 Mar 2025', url: '#' },
-      ],
-    },
+  // icon: class dari devicons (https://devicon.dev) — cari nama teknologi, copy class-nya
+  // Contoh: 'devicon-python-plain' atau 'devicon-react-original'
+  skills: [
+    // Frontend
+    { name: 'JavaScript',  icon: 'devicon-javascript-plain'     },
+    { name: 'React',       icon: 'devicon-react-original'       },
+    { name: 'Next.js',     icon: 'devicon-nextjs-plain'         },
+    // Backend & DB
+    { name: 'Node.js',     icon: 'devicon-nodejs-plain'         },
+    { name: 'Express',     icon: 'devicon-express-original'     },
+    { name: 'PHP',         icon: 'devicon-php-plain'            },
+    { name: 'MySQL',       icon: 'devicon-mysql-plain'          },
+    { name: 'PostgreSQL',  icon: 'devicon-postgresql-plain'     },
+    { name: 'Firebase',    icon: 'devicon-firebase-plain'       },
+    { name: 'Supabase',    icon: 'devicon-supabase-plain'       },
+    { name: 'Google Cloud Platform', icon: 'devicon-googlecloudplatform-plain' },
+    
+    // ML & AI
+    { name: 'Python',      icon: 'devicon-python-plain'         },
+    { name: 'TensorFlow',  icon: 'devicon-tensorflow-original'  },
+    { name: 'Keras',       icon: 'devicon-keras-plain'          },
+    // Tools
+    { name: 'Git',         icon: 'devicon-git-plain'            },
+    { name: 'GitHub',      icon: 'devicon-github-plain'         },
+    { name: 'Docker',      icon: 'devicon-docker-plain'         },
+    { name: 'Postman',     icon: 'devicon-postman-plain'        },
+    { name: 'Vercel',      icon: 'devicon-vercel-plain'         },
+    { name: 'Figma',       icon: 'devicon-figma-plain'          },
   ],
 };
