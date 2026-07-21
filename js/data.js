@@ -152,7 +152,7 @@ const DATA = {
     { name: 'PostgreSQL',  icon: 'devicon-postgresql-plain'     },
     { name: 'Firebase',    icon: 'devicon-firebase-plain'       },
     { name: 'Supabase',    icon: 'devicon-supabase-plain'       },
-    { name: 'Google Cloud Platform', icon: 'devicon-googlecloudplatform-plain' },
+    { name: 'Google Cloud', icon: 'devicon-googlecloud-plain' },
     
     // ML & AI
     { name: 'Python',      icon: 'devicon-python-plain'         },
