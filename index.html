@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Vikri A. Haikal — Junior Fullstack Developer & Certified Associate Data Analyst. Terbuka untuk peluang kerja di bidang web development dan data analytics." />
+  <meta name="author" content="Vikri A. Haikal" />
+  <meta name="keywords" content="Vikri Haikal, portfolio, fullstack developer, data analyst, machine learning, web developer Indonesia" />
+  <meta property="og:title" content="Vikri A. Haikal — Portfolio" />
+  <meta property="og:description" content="Junior Fullstack Developer & Certified Associate Data Analyst" />
+  <meta property="og:type" content="website" />
+  <title>Vikri A. Haikal — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER / NAVBAR
+  ═══════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Vikri A. Haikal — kembali ke atas">
+        <span class="logo-bracket">&lt;</span>Vikri<span class="logo-bracket">.dev /&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#about"        class="nav-link" data-en="About"        data-id="Tentang">Tentang</a>
+        <a href="#education"    class="nav-link" data-en="Education"    data-id="Pendidikan">Pendidikan</a>
+        <a href="#experience"   class="nav-link" data-en="Experience"   data-id="Pengalaman">Pengalaman</a>
+        <a href="#projects"     class="nav-link" data-en="Projects"     data-id="Proyek">Proyek</a>
+        <a href="#skills"       class="nav-link" data-en="Skills"       data-id="Keahlian">Keahlian</a>
+        <a href="#certificates" class="nav-link" data-en="Certificates" data-id="Sertifikat">Sertifikat</a>
+        <a href="#contact"      class="nav-link" data-en="Contact"      data-id="Kontak">Kontak</a>
+      </nav>
+
+      <!-- Controls: Theme + Language + Mobile Toggle -->
+      <div class="nav-controls">
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="themeToggle" aria-label="Ganti tema terang/gelap" title="Toggle dark/light mode">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- Language Toggle -->
+        <button class="lang-btn" id="langToggle" aria-label="Switch language / Ganti bahasa">
+          <span class="lang-opt active" id="langEN">EN</span>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <span class="lang-opt" id="langID">ID</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="icon-btn mobile-menu-btn" id="menuToggle" aria-label="Buka/tutup menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════ -->
+  <main id="main">
+
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section id="home" class="section hero-section" aria-label="Halaman utama">
+      <div class="container hero-container">
+
+        <!-- Text Content -->
+        <div class="hero-text">
+          <p class="hero-greeting" aria-hidden="true">
+            <span data-en="Hi, I'm" data-id="Hai, Saya">Hai, Saya</span>
+          </p>
+          <h1 class="hero-name">Vikri A. Haikal</h1>
+          <div class="hero-role" aria-live="polite" aria-label="Peran profesional">
+            <span class="role-prefix" aria-hidden="true">// </span>
+            <span class="role-text" id="roleText"></span>
+            <span class="role-cursor" aria-hidden="true"></span>
+          </div>
+          <p class="hero-subtitle" id="heroSubtitle"
+             data-en="Building functional digital solutions — from web development to data analytics. Certified Associate Data Analyst."
+             data-id="Membangun solusi digital yang fungsional — dari web development hingga data analytics. Certified Associate Data Analyst.">
+          </p>
+          <div class="hero-btns">
+            <a href="public/cv/Vikri_Resume.pdf"
+               class="btn btn-primary"
+               id="cvBtn"
+               download
+               aria-label="Unduh CV Vikri A. Haikal">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span data-en="Download CV" data-id="Unduh CV">Unduh CV</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span data-en="Contact Me" data-id="Hubungi Saya">Hubungi Saya</span>
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="#" id="githubLink" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                <path d="M9 18c-4.51 2-5-2-7-2"/>
+              </svg>
+            </a>
+            <a href="#" id="linkedinLink" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Avatar -->
+        <div class="hero-avatar-col">
+          <div class="hero-avatar">
+            <img src="public/avatar.png" alt="Foto profil Vikri A. Haikal" id="heroAvatarImg"
+                 onerror="this.style.display='none'; document.getElementById('heroAvatarFallback').style.display='flex';" />
+            <div class="hero-avatar-fallback" id="heroAvatarFallback" style="display:none" aria-hidden="true">VA</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────── -->
+    <section id="about" class="section alt-section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-title" id="about-title" data-en="About Me" data-id="Tentang Saya">Tentang Saya</h2>
+        </header>
+        <p class="about-text fade-in" id="aboutText"
+           data-en="I'm a passionate Junior Fullstack Developer and Certified Associate Data Analyst from Sukabumi, Indonesia. I enjoy building functional web applications and extracting meaningful insights from data. With hands-on experience in frontend, backend, and machine learning, I'm eager to contribute to innovative teams and real-world projects."
+           data-id="Saya adalah Junior Fullstack Developer dan Certified Associate Data Analyst dari Sukabumi, Indonesia. Saya menyukai membangun aplikasi web yang fungsional dan mengekstrak wawasan bermakna dari data. Dengan pengalaman di frontend, backend, dan machine learning, saya siap berkontribusi dalam tim yang inovatif.">
+        </p>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ─────────────────────────────────────── -->
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-title" id="education-title" data-en="Education" data-id="Pendidikan">Pendidikan</h2>
+        </header>
+        <!-- Rendered by script.js from DATA.education -->
+        <div class="timeline" id="educationTimeline"></div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ────────────────────────────────────── -->
+    <section id="experience" class="section alt-section" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-title" id="experience-title" data-en="Experience" data-id="Pengalaman">Pengalaman</h2>
+        </header>
+        <!-- Rendered by script.js from DATA.experience -->
+        <div class="timeline" id="experienceTimeline"></div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ──────────────────────────────────────── -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-title" id="projects-title" data-en="Projects" data-id="Proyek">Proyek</h2>
+        </header>
+        <!-- Rendered by script.js from DATA.projects -->
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ────────────────────────────────────────── -->
+    <section id="skills" class="section alt-section" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-title" id="skills-title" data-en="Skills &amp; Tech Stack" data-id="Keahlian &amp; Tech Stack">Keahlian &amp; Tech Stack</h2>
+        </header>
+        <!-- Rendered by script.js from DATA.skillGroups -->
+        <div class="skills-groups" id="skillsGroups"></div>
+      </div>
+    </section>
+
+    <!-- ── CERTIFICATES ──────────────────────────────────── -->
+    <section id="certificates" class="section" aria-labelledby="cert-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-title" id="cert-title" data-en="Certificates" data-id="Sertifikat">Sertifikat</h2>
+        </header>
+        <!-- Tab buttons — rendered by script.js -->
+        <div class="cert-tabs" id="certTabs" role="tablist" aria-label="Platform sertifikat"></div>
+        <!-- Cert cards — rendered by script.js -->
+        <div class="cert-list" id="certList" role="tabpanel"></div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ───────────────────────────────────────── -->
+    <section id="contact" class="section alt-section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header fade-in">
+          <h2 class="section-title" id="contact-title" data-en="Contact" data-id="Kontak">Kontak</h2>
+          <p class="section-subtitle" data-en="Let's work together or just say hello!" data-id="Ayo bekerja sama atau sekadar sapa!">Ayo bekerja sama atau sekadar sapa!</p>
+        </header>
+
+        <div class="contact-grid">
+
+          <!-- Contact Info -->
+          <div class="contact-info fade-in">
+
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label" data-en="Email" data-id="Email">Email</p>
+                <div class="contact-email-row">
+                  <a href="#" id="contactEmailLink" class="contact-value"></a>
+                  <button class="copy-btn" id="copyEmailBtn" aria-label="Salin alamat email">
+                    <span data-en="Copy" data-id="Salin">Salin</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label" data-en="Location" data-id="Lokasi">Lokasi</p>
+                <span class="contact-value" id="contactLocation"></span>
+              </div>
+            </div>
+
+            <!-- WhatsApp (hidden if phone is null in data.js) -->
+            <div class="contact-item" id="waItem" style="display:none">
+              <div class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.43 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91A16 16 0 0 0 13 15l.91-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label" data-en="WhatsApp" data-id="WhatsApp">WhatsApp</p>
+                <a href="#" id="waLink" target="_blank" rel="noopener noreferrer" class="contact-value contact-wa">
+                  <span data-en="Chat on WhatsApp" data-id="Chat via WhatsApp">Chat via WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-socials">
+              <a href="#" id="contactGithub" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                  <path d="M9 18c-4.51 2-5-2-7-2"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="#" id="contactLinkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap fade-in">
+            <form id="contactForm" class="contact-form" novalidate aria-label="Formulir kontak">
+
+              <div class="form-group">
+                <label for="formName" data-en="Name" data-id="Nama">Nama</label>
+                <input type="text" id="formName" name="name" required autocomplete="name"
+                       data-ph-en="Your name" data-ph-id="Nama Anda"
+                       placeholder="Nama Anda" />
+              </div>
+
+              <div class="form-group">
+                <label for="formEmail">Email</label>
+                <input type="email" id="formEmail" name="email" required autocomplete="email"
+                       data-ph-en="your@email.com" data-ph-id="email@anda.com"
+                       placeholder="email@anda.com" />
+              </div>
+
+              <div class="form-group">
+                <label for="formMsg" data-en="Message" data-id="Pesan">Pesan</label>
+                <textarea id="formMsg" name="message" rows="5" required
+                          data-ph-en="How can I help you?" data-ph-id="Apa yang bisa saya bantu?"
+                          placeholder="Apa yang bisa saya bantu?"></textarea>
+              </div>
+
+              <div class="form-error-msg" id="formErrorMsg" role="alert" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="formSubmitBtn">
+                <span id="formBtnText" data-en="Send Message" data-id="Kirim Pesan">Kirim Pesan</span>
+              </button>
+
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="formSuccess" hidden role="status" aria-live="polite">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48" style="color:var(--accent)" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <h3 data-en="Message Sent!" data-id="Pesan Terkirim!">Pesan Terkirim!</h3>
+              <p data-en="Thank you! I'll get back to you soon." data-id="Terima kasih! Saya akan segera menghubungi.">Terima kasih! Saya akan segera menghubungi.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-container">
+      <a href="#home" class="nav-logo" aria-label="Kembali ke atas">
+        <span class="logo-bracket">&lt;</span>Vikri<span class="logo-bracket">.dev /&gt;</span>
+      </a>
+      <p class="footer-rights">
+        &copy; <span id="footerYear"></span> Vikri A. Haikal.
+        <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">Hak cipta dilindungi.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts — data.js must be loaded before script.js -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
