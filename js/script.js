@@ -313,15 +313,3 @@ function initScrollTopBtn() {
   document.body.appendChild(btn);
 }
 
-// ─── Avatar Fallback ──────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const img = $('#heroAvatarImg');
-  if (!img) return;
-  img.addEventListener('error', () => {
-    img.style.display = 'none';
-    const fallback = document.createElement('div');
-    fallback.className = 'hero-avatar-fallback';
-    fallback.textContent = DATA.personal.name.split(' ').map(n => n[0]).slice(0, 2).join('');
-    img.parentElement.appendChild(fallback);
-  });
-});
