@@ -590,6 +590,14 @@ ul { list-style: none; }
   transform: translateY(-2px);
 }
 
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .project-category {
   font-size: 0.75rem;
   font-weight: 600;
@@ -597,6 +605,51 @@ ul { list-style: none; }
   letter-spacing: 0.08em;
   color: var(--accent);
 }
+
+/* ── Project Status Badge ── */
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.project-status--ongoing {
+  color: #16a34a;
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+
+.project-status--completed {
+  color: var(--text-subtle);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  flex-shrink: 0;
+  animation: status-pulse 2s infinite;
+}
+
+@keyframes status-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+  50%       { box-shadow: 0 0 0 4px rgba(22, 163, 74, 0); }
+}
+
+[data-theme="dark"] .project-status--ongoing {
+  color: #4ade80;
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(22, 163, 74, 0.2);
+}
+[data-theme="dark"] .status-dot { background: #4ade80; }
 
 .project-name {
   font-size: 1.1rem;
@@ -626,15 +679,30 @@ ul { list-style: none; }
 .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-muted);
-  transition: color var(--t);
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: color var(--t), border-color var(--t), background-color var(--t);
 }
-.project-link svg { width: 14px; height: 14px; }
-.project-link:hover { color: var(--accent); }
-.project-link-demo { color: var(--accent); }
+.project-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+.project-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+.project-link-demo {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+.project-link-demo:hover {
+  background: var(--accent);
+  color: #fff;
+}
 
 /* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .footer {

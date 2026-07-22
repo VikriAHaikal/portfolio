@@ -124,11 +124,23 @@ function renderProjects() {
 
   container.innerHTML = DATA.projects.map(proj => `
     <article class="project-card fade-in">
-      <span class="project-category"
-        data-en="${proj.category.en}"
-        data-id="${proj.category.id}">
-        ${proj.category[currentLang]}
-      </span>
+      <div class="project-card-header">
+        <span class="project-category"
+          data-en="${proj.category.en}"
+          data-id="${proj.category.id}">
+          ${proj.category[currentLang]}
+        </span>
+        ${proj.status ? `
+          <span class="project-status project-status--${proj.status}">
+            ${proj.status === 'ongoing' ? '<span class="status-dot" aria-hidden="true"></span>' : ''}
+            <span
+              data-en="${DATA.i18n.en.projects.status[proj.status]}"
+              data-id="${DATA.i18n.id.projects.status[proj.status]}">
+              ${DATA.i18n[currentLang].projects.status[proj.status]}
+            </span>
+          </span>
+        ` : ''}
+      </div>
       <h3 class="project-name">${proj.name}</h3>
       <p class="project-desc"
         data-en="${proj.desc.en}"
@@ -150,11 +162,7 @@ function renderProjects() {
                 data-id="${DATA.i18n.id.projects.liveDemo}">
               ${extIcon} <span>${DATA.i18n[currentLang].projects.liveDemo}</span>
              </a>`
-          : `<span class="project-link"
-                data-en="${DATA.i18n.en.projects.private}"
-                data-id="${DATA.i18n.id.projects.private}">
-              ${DATA.i18n[currentLang].projects.private}
-             </span>`
+          : ''
         }
       </div>
     </article>`
