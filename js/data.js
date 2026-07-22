@@ -15,7 +15,6 @@ const DATA = {
     phone:    '+6282113745361',           // Set null untuk sembunyikan tombol WA
     location: 'Sukabumi, Jawa Barat, Indonesia',
     cvUrl:    'public/cv/CV_Vikri_A_Haikal.pdf', // Taruh file PDF di public/cv/
-    formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID', // Ganti dengan endpoint kamu
     socials: {
       github:   'https://github.com/VikriAHaikal',
       linkedin: 'https://www.linkedin.com/in/vikriahaikal',
