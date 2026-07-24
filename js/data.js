@@ -67,16 +67,6 @@ const DATA = {
   // ─── Experience ───────────────────────────────────────────────────────────
   experience: [
     {
-      role:    { en: 'Web Developer Intern', id: 'Magang Web Developer' },
-      company: 'Koperasi Konsumen PT Adis Dimension Footwear',
-      period:  '2023',
-      tags:    ['Web Development', 'Frontend', 'Backend Integration', 'Company Profile'],
-      desc: {
-        en: 'Built a dynamic company profile website from UI design to deployment using a modern web stack. Gained real-world experience in end-to-end web project management at an international footwear manufacturing company.',
-        id: 'Membangun website company profile dinamis dari desain UI hingga deployment menggunakan stack web modern. Mendapat pengalaman nyata dalam manajemen proyek web end-to-end di perusahaan manufaktur alas kaki internasional.',
-      },
-    },
-    {
       role:    { en: "Project Manager — Drink't App", id: "Project Manager — Aplikasi Drink't" },
       company: 'Bangkit Academy, Kampus Merdeka · Google · GoTo · Traveloka',
       period:  '2024',
@@ -96,21 +86,20 @@ const DATA = {
         id: 'Mengelola administrasi organisasi, notulensi rapat, surat-menyurat resmi, koordinasi antar divisi, dan menjadi penghubung antara pengurus dan anggota.',
       },
     },
+    {
+      role:    { en: 'Web Developer Intern', id: 'Magang Web Developer' },
+      company: 'Koperasi Konsumen PT Adis Dimension Footwear',
+      period:  '2023',
+      tags:    ['Web Development', 'Frontend', 'Backend Integration', 'Company Profile'],
+      desc: {
+        en: 'Built a dynamic company profile website from UI design to deployment using a modern web stack. Gained real-world experience in end-to-end web project management at an international footwear manufacturing company.',
+        id: 'Membangun website company profile dinamis dari desain UI hingga deployment menggunakan stack web modern. Mendapat pengalaman nyata dalam manajemen proyek web end-to-end di perusahaan manufaktur alas kaki internasional.',
+      },
+    },
   ],
 
+
   projects: [
-    {
-      name:     "Drink't App — Nutrition Scanner",
-      category: { en: 'Machine Learning & IoT', id: 'Machine Learning & IoT' },
-      desc: {
-        en: 'A mobile application that scans nutrition tables on packaged drinks to monitor sugar intake in real-time. Led a team of 6, managing backend deployment on GCP and integrating TensorFlow Lite model.',
-        id: 'Aplikasi mobile untuk memindai tabel nutrisi minuman kemasan guna memantau asupan gula secara real-time. Memimpin tim beranggotakan 6 orang, mengelola backend di GCP, serta integrasi model TensorFlow Lite.',
-      },
-      tags:      ['TensorFlow Lite', 'Google Cloud Platform', 'Python', 'Android Dev'],
-      githubUrl: 'https://github.com/VikriAHaikal/Capstone',
-      demoUrl:   null,
-      status:    'completed',
-    },
     {
       name:     'KOPKAR ADIS — Company Profile Web',
       category: { en: 'Fullstack Web Development', id: 'Pengembangan Web Fullstack' },
@@ -127,13 +116,25 @@ const DATA = {
       name:     'Minimalist Developer Portfolio',
       category: { en: 'Frontend Web', id: 'Frontend Web' },
       desc: {
-        en: 'A clean, lightweight, and fast personal developer portfolio. Built using semantic vanilla HTML5, custom CSS design tokens, and clean vanilla JS. Features dark/light mode and bilingual support.',
-        id: 'Website portfolio personal developer yang bersih, ringan, dan cepat. Dibangun menggunakan HTML5 semantik, custom CSS design tokens, dan JS vanilla. Dilengkapi dengan mode terang/gelap serta dukungan dua bahasa.',
+        en: 'A clean, lightweight, and fast personal developer portfolio. Built using semantic vanilla HTML5, custom CSS design tokens, and clean vanilla JS. Features dark/light mode and bilingual EN/ID support.',
+        id: 'Website portfolio personal developer yang bersih, ringan, dan cepat. Dibangun menggunakan HTML5 semantik, custom CSS design tokens, dan JS vanilla. Dilengkapi mode gelap/terang serta dukungan dua bahasa EN/ID.',
       },
       tags:      ['HTML5', 'CSS3', 'JavaScript', 'Vanilla CSS', 'i18n'],
       githubUrl: 'https://github.com/VikriAHaikal/portfolio',
       demoUrl:   null,
       status:    'ongoing',
+    },
+    {
+      name:     "Drink't App — Nutrition Scanner",
+      category: { en: 'Machine Learning & Mobile', id: 'Machine Learning & Mobile' },
+      desc: {
+        en: 'A mobile application that scans nutrition tables on packaged drinks to monitor sugar intake in real-time. Led a cross-functional team of 6, managing backend deployment on GCP and integrating TensorFlow Lite model.',
+        id: 'Aplikasi mobile untuk memindai tabel nutrisi minuman kemasan guna memantau asupan gula secara real-time. Memimpin tim lintas divisi beranggotakan 6 orang, mengelola backend di GCP, serta integrasi model TensorFlow Lite.',
+      },
+      tags:      ['TensorFlow Lite', 'Google Cloud', 'Python', 'Android Dev'],
+      githubUrl: 'https://github.com/VikriAHaikal/Capstone',
+      demoUrl:   null,
+      status:    'completed',
     },
   ],
 
