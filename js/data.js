@@ -20,14 +20,14 @@ const DATA = {
       linkedin: 'https://www.linkedin.com/in/vikriahaikal',
     },
     roles: [ // Teks yang berputar di hero
-      'Software Engineer',
+      'Machine Learning Engineer',
       'Fullstack Web Developer',
-      'Machine Learning Specialist',
+      'Tech Project Manager',
       'AI Enthusiast',
     ],
     heroSubtitle: {
-      en: 'Software engineering and Machine Learning graduate dedicated to building innovative software solutions and intelligent systems.',
-      id: 'Lulusan software engineering dan Machine Learning yang berdedikasi membangun solusi perangkat lunak inovatif dan sistem cerdas.',
+      en: 'Informatics Engineering graduate with a passion for Machine Learning, AI, and tech project management — building impactful solutions through innovation and continuous learning.',
+      id: 'Lulusan Teknik Informatika dengan passion di Machine Learning, AI, dan manajemen proyek teknologi — membangun solusi berdampak melalui inovasi dan pembelajaran berkelanjutan.',
     },
   },
 
@@ -60,8 +60,8 @@ const DATA = {
   },
 
   about: {
-    en: "A Bachelor's graduate from Universitas Serang Raya with a GPA of 3.84, possessing a deep interest in Machine Learning, Artificial Intelligence, and software development. Equipped with practical experience through Independent Study at Bangkit Academy and IDCamp training by Dicoding. Committed to applying technical expertise to create innovative solutions in today's industry.",
-    id: "Seorang lulusan S1 dari Universitas Serang Raya dengan IPK 3,84 yang memiliki ketertarikan mendalam di bidang Machine Learning, Artificial Intelligence, dan pengembangan perangkat lunak. Memiliki pengalaman praktis melalui Studi Independen di Bangkit Academy dan pelatihan IDCamp dari Dicoding. Berkomitmen untuk menerapkan keahlian teknis dalam menciptakan solusi inovatif di era industri saat ini.",
+    en: "I'm a fresh graduate in Informatics Engineering from Universitas Serang Raya with a strong passion for technology, innovation, and problem-solving. My journey into tech is built on a diverse foundation — after graduating in Mechanical Engineering from SMK Negeri 1 Kota Sukabumi and gaining hands-on discipline as an operator at Mitsubishi Motors Krama Yudha Indonesia, I transitioned into IT to pursue my deep interest in Machine Learning, Artificial Intelligence, and system development. In 2024, I completed the Machine Learning path at Bangkit Academy led by Google, GoTo, Tokopedia & Traveloka, which sharpened my expertise in building deployable AI models. Beyond technical coding, I have practical experience in technology project management — leading cross-functional teams and delivering projects efficiently from planning to deployment. For me, continuous learning, staying healthy, and delivering impactful results are core values.",
+    id: "Saya adalah fresh graduate Teknik Informatika dari Universitas Serang Raya dengan passion kuat di bidang teknologi, inovasi, dan problem-solving. Perjalanan saya ke dunia IT dibangun dari fondasi yang beragam — setelah lulus dari jurusan Teknik Mesin SMK Negeri 1 Kota Sukabumi dan mendapatkan pengalaman kerja sebagai operator di Mitsubishi Motors Krama Yudha Indonesia, saya beralih ke IT untuk mengejar minat mendalam di bidang Machine Learning, Artificial Intelligence, dan pengembangan sistem. Pada 2024, saya menyelesaikan jalur Machine Learning di Bangkit Academy yang dipimpin Google, GoTo, Tokopedia & Traveloka, yang mengasah keahlian saya dalam membangun model AI yang dapat di-deploy. Selain kemampuan teknis, saya memiliki pengalaman praktis dalam manajemen proyek teknologi — memimpin tim lintas fungsi dan memastikan proyek terselesaikan secara efisien dari perencanaan hingga deployment. Bagi saya, belajar berkelanjutan, menjaga kesehatan, dan menghasilkan dampak nyata adalah nilai inti dalam berkarya.",
   },
 
   // ─── Experience ───────────────────────────────────────────────────────────
