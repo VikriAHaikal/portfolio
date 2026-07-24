@@ -112,16 +112,16 @@ const DATA = {
       status:    'completed',
     },
     {
-      name:     'Company Profile Web — Koperasi PT Adis',
-      category: { en: 'Web Development', id: 'Pengembangan Web' },
+      name:     'KOPKAR ADIS — Company Profile Web',
+      category: { en: 'Fullstack Web Development', id: 'Pengembangan Web Fullstack' },
       desc: {
-        en: 'Developed a dynamic and responsive company profile website for Koperasi Konsumen PT Adis Dimension Footwear, facilitating online presence and information dissemination for cooperative members.',
-        id: 'Mengembangkan website profil koperasi konsumen PT Adis Dimension Footwear yang dinamis dan responsif untuk mendukung kehadiran online dan penyebaran informasi kepada anggota koperasi.',
+        en: 'A major rebuild of the KKP internship project into a production-ready fullstack web app for Koperasi Konsumen PT Adis Dimension Footwear. Features an Admin CMS panel with rich text editor, dual-mode database (Supabase ↔ LocalStorage fallback), dynamic SEO per page, and PWA-ready service worker.',
+        id: 'Pembaruan besar dari proyek KKP menjadi aplikasi web fullstack siap produksi untuk Koperasi Konsumen PT Adis Dimension Footwear. Dilengkapi panel Admin CMS dengan rich text editor, dual-mode database (Supabase ↔ LocalStorage fallback), SEO dinamis per halaman, dan service worker PWA-ready.',
       },
-      tags:      ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL'],
-      githubUrl: 'https://github.com/VikriAHaikal',
+      tags:      ['TypeScript', 'React 19', 'Vite', 'Supabase', 'React Router', 'Vanilla CSS', 'Vercel'],
+      githubUrl: 'https://github.com/VikriAHaikal/koperasi-adis-profile',
       demoUrl:   null,
-      status:    'completed',
+      status:    'ongoing',
     },
     {
       name:     'Minimalist Developer Portfolio',
