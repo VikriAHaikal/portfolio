@@ -36,7 +36,7 @@ const DATA = {
     en: {
       hero: {
         greeting: "Hi, I'm",
-        downloadCV: 'Download CV', contactMe: 'Contact Me',
+        downloadCV: 'View CV', contactMe: 'Contact Me',
       },
       about:      { title: 'About Me' },
       experience: { title: 'Experience' },
@@ -48,7 +48,7 @@ const DATA = {
     id: {
       hero: {
         greeting: 'Hai, Saya',
-        downloadCV: 'Unduh CV', contactMe: 'Hubungi Saya',
+        downloadCV: 'Lihat CV', contactMe: 'Hubungi Saya',
       },
       about:      { title: 'Tentang Saya' },
       experience: { title: 'Pengalaman' },
