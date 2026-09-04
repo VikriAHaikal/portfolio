@@ -66,7 +66,11 @@ function initPersonalData() {
   // ── Contact section ──────────────────────────────────────────────────────
   const emailBtn = $("#contactEmailBtn");
   const emailText = $("#contactEmailText");
-  if (emailBtn) emailBtn.href = `mailto:${p.email}`;
+  if (emailBtn) {
+    emailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(p.email)}`;
+    emailBtn.target = "_blank";
+    emailBtn.rel = "noopener noreferrer";
+  }
   if (emailText) emailText.textContent = p.email;
 
   // WhatsApp card
