@@ -7,6 +7,7 @@
 ## 📸 Preview
 
 Website ini menampilkan:
+
 - **Hero Section** dengan animasi _typewriter_ untuk peran profesional
 - **About, Experience, Projects, Skills, Contact** section yang komprehensif
 - **Dark / Light mode** toggle dengan preferensi tersimpan di localStorage
@@ -46,15 +47,15 @@ Tidak perlu menyentuh `index.html` atau `script.js` untuk memperbarui konten.
 
 ### Data yang dapat diedit di `data.js`:
 
-| Bagian | Keterangan |
-|---|---|
-| `personal` | Nama, email, telepon, lokasi, URL CV, link sosial media |
-| `personal.roles` | Teks yang berputar di hero (typewriter effect) |
-| `about` | Paragraf "Tentang Saya" (EN & ID) |
-| `experience[]` | Daftar pengalaman kerja / magang / organisasi |
-| `projects[]` | Daftar proyek dengan tag, link GitHub, dan link demo |
-| `skills[]` | Ikon teknologi menggunakan kelas [Devicon](https://devicon.dev) |
-| `i18n` | Semua label UI dalam dua bahasa (EN & ID) |
+| Bagian           | Keterangan                                                      |
+| ---------------- | --------------------------------------------------------------- |
+| `personal`       | Nama, email, telepon, lokasi, URL CV, link sosial media         |
+| `personal.roles` | Teks yang berputar di hero (typewriter effect)                  |
+| `about`          | Paragraf "Tentang Saya" (EN & ID)                               |
+| `experience[]`   | Daftar pengalaman kerja / magang / organisasi                   |
+| `projects[]`     | Daftar proyek dengan tag, link GitHub, dan link demo            |
+| `skills[]`       | Ikon teknologi menggunakan kelas [Devicon](https://devicon.dev) |
+| `i18n`           | Semua label UI dalam dua bahasa (EN & ID)                       |
 
 ---
 
@@ -78,14 +79,14 @@ python -m http.server 3000
 
 ## 🛠️ Tech Stack
 
-| Kategori | Teknologi |
-|---|---|
-| Markup | HTML5 (Semantic) |
-| Styling | Vanilla CSS (Custom Properties / Design Tokens) |
-| Logika | Vanilla JavaScript (ES6+) |
-| Ikon Teknologi | [Devicon](https://devicon.dev) via CDN |
-| Font | [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts |
-| Deployment | GitHub Pages / Vercel / Netlify (static hosting) |
+| Kategori       | Teknologi                                                                                                                                            |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Markup         | HTML5 (Semantic)                                                                                                                                     |
+| Styling        | Vanilla CSS (Custom Properties / Design Tokens)                                                                                                      |
+| Logika         | Vanilla JavaScript (ES6+)                                                                                                                            |
+| Ikon Teknologi | [Devicon](https://devicon.dev) via CDN                                                                                                               |
+| Font           | [Space Grotesk](https://fonts.google.com/specimen/Space_Grotesk) + [IBM Plex Mono](https://fonts.google.com/specimen/IBM_Plex_Mono) via Google Fonts |
+| Deployment     | GitHub Pages / Vercel / Netlify (static hosting)                                                                                                     |
 
 ---
 
@@ -105,14 +106,16 @@ python -m http.server 3000
 ## 📦 Cara Deploy
 
 ### GitHub Pages
+
 1. Push repository ke GitHub
 2. Buka **Settings → Pages**
 3. Set source ke branch `main` / `master`, folder `/ (root)`
 4. Website akan live di `https://username.github.io/portfolio`
 
 ### Vercel / Netlify
+
 1. Import repository
-2. **Build Command**: *(kosongkan)*
+2. **Build Command**: _(kosongkan)_
 3. **Output Directory**: `.` atau `./`
 4. Deploy — selesai!
 
