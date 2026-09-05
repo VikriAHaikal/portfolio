@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderEducation();
   renderCertifications();
   renderProjects();
+  initProjectMedia();
   renderSkills();
   applyLanguage(currentLang);
   initTypewriter();
@@ -344,6 +345,7 @@ function renderProjects() {
 
   const buildCard = (proj, featured = false) => `
     <article class="project-card${featured ? " project-card--featured" : " project-card--other"} fade-in">
+      ${buildProjectMedia(proj)}
       <div class="project-card-header">
         <span class="project-category"
           data-en="${proj.category.en}"
@@ -429,6 +431,67 @@ function renderProjects() {
         : ""
     }
   `;
+}
+
+function buildProjectMedia(proj) {
+  const media = proj.media;
+  if (!media || !media.src) return "";
+
+  const label =
+    currentLang === "en" ? "Open project preview" : "Buka preview proyek";
+  const typeLabel =
+    media.type === "video"
+      ? "Video"
+      : media.type === "gif"
+        ? "GIF"
+        : "Screenshot";
+  const poster = media.poster ? ` poster="${media.poster}"` : "";
+  const mediaContent =
+    media.type === "video"
+      ? `<video src="${media.src}"${poster} muted loop playsinline preload="metadata" aria-label="${media.alt || proj.name}"></video>`
+      : `<img src="${media.src}" alt="${media.alt || proj.name}" loading="lazy" />`;
+
+  return `
+    <button class="project-media" type="button" data-project-media="${encodeURIComponent(JSON.stringify(media))}"
+      data-project-title="${proj.name.replace(/"/g, "&quot;")}" aria-label="${label}: ${proj.name}">
+      ${mediaContent}
+      <span class="project-media-overlay">
+        <span class="project-media-type">${typeLabel}</span>
+        <span class="project-media-action"><span aria-hidden="true">&gt;</span><span>${currentLang === "en" ? "View preview" : "Lihat preview"}</span></span>
+      </span>
+    </button>`;
+}
+
+function initProjectMedia() {
+  const dialog = $("#mediaDialog");
+  const content = $("#mediaDialogContent");
+  const title = $("#mediaDialogTitle");
+  const closeButton = $("#mediaDialogClose");
+  if (!dialog || !content || !title) return;
+
+  const closeDialog = () => {
+    dialog.close();
+    content.replaceChildren();
+  };
+
+  $("#projectsGrid")?.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-project-media]");
+    if (!trigger) return;
+
+    const media = JSON.parse(decodeURIComponent(trigger.dataset.projectMedia));
+    title.textContent = trigger.dataset.projectTitle;
+    content.innerHTML =
+      media.type === "video"
+        ? `<video src="${media.src}"${media.poster ? ` poster="${media.poster}"` : ""} controls autoplay playsinline></video>`
+        : `<img src="${media.src}" alt="${media.alt || trigger.dataset.projectTitle}" />`;
+    dialog.showModal();
+  });
+
+  closeButton?.addEventListener("click", closeDialog);
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeDialog();
+  });
+  dialog.addEventListener("close", () => content.replaceChildren());
 }
 
 // ─── 6. Render Skills (with category labels) ──────────────────────────────────

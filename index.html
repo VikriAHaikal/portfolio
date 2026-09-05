@@ -47,6 +47,23 @@
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true" role="progressbar" aria-valuemin="0"
     aria-valuemax="100"></div>
 
+  <!-- Project media viewer -->
+  <dialog class="media-dialog" id="mediaDialog" aria-labelledby="mediaDialogTitle">
+    <div class="media-dialog-inner">
+      <div class="media-dialog-header">
+        <div>
+          <p class="media-dialog-kicker" data-en="Project preview" data-id="Preview proyek">Preview proyek</p>
+          <h2 id="mediaDialogTitle"></h2>
+        </div>
+        <button class="media-dialog-close icon-btn" id="mediaDialogClose" type="button" aria-label="Tutup preview"
+          title="Tutup preview">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="media-dialog-content" id="mediaDialogContent"></div>
+    </div>
+  </dialog>
+
   <!-- ═══════════════════════════════════════════════
        HEADER / NAVBAR
   ═══════════════════════════════════════════════ -->

@@ -238,6 +238,11 @@ const DATA = {
       githubUrl: "https://github.com/VikriAHaikal/Alifin",
       demoUrl: "https://ai.studio/apps/d639b909-a119-4340-9688-71b4454c5a5a",
       demoLabel: { en: "Google AI Studio", id: "Google AI Studio" },
+      media: {
+        type: "gif",
+        src: "alifin.gif",
+        alt: "Preview aplikasi pembelajaran Alifin",
+      },
       status: "completed",
       date: "May 2026",
     },
@@ -255,6 +260,11 @@ const DATA = {
       tags: ["TensorFlow Lite", "Google Cloud", "Python", "Android Dev", "GCP"],
       githubUrl: "https://github.com/VikriAHaikal/Capstone",
       demoUrl: null,
+      media: {
+        type: "gif",
+        src: "drinknt.gif",
+        alt: "Preview aplikasi Drink't Nutrition Scanner",
+      },
       status: "completed",
     },
     {
@@ -278,6 +288,11 @@ const DATA = {
       ],
       githubUrl: "https://github.com/VikriAHaikal/koperasi-adis-profile",
       demoUrl: null,
+      media: {
+        type: "gif",
+        src: "compro_adis.gif",
+        alt: "Preview website KOPKAR ADIS",
+      },
       status: "ongoing",
     },
     {
@@ -291,6 +306,7 @@ const DATA = {
       tags: ["HTML5", "CSS3", "JavaScript", "i18n"],
       githubUrl: "https://github.com/VikriAHaikal/portfolio",
       demoUrl: null,
+      media: null,
       status: "ongoing",
     },
   ],
