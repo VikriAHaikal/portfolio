@@ -399,10 +399,10 @@ function renderProjects() {
         ${proj.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
       </div>
       <div class="project-links">
-        <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link"
-           data-en="${DATA.i18n.en.projects.sourceCode}"
-           data-id="${DATA.i18n.id.projects.sourceCode}">
-          ${githubIcon} <span>${DATA.i18n[currentLang].projects.sourceCode}</span>
+          <a href="${proj.sourceUrl || proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link"
+            data-en="${proj.sourceLabel?.en || DATA.i18n.en.projects.sourceCode}"
+            data-id="${proj.sourceLabel?.id || DATA.i18n.id.projects.sourceCode}">
+          ${proj.sourceUrl ? extIcon : githubIcon} <span>${proj.sourceLabel?.[currentLang] || DATA.i18n[currentLang].projects.sourceCode}</span>
         </a>
         ${
           proj.demoUrl

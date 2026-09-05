@@ -294,6 +294,36 @@ const DATA = {
   // group: 'other' → tampil di bagian "Other Projects" (compact, secondary)
   projects: [
     {
+      name: "Legal Assistance AI",
+      group: "ml",
+      category: {
+        en: "LLM Fine-Tuning & RAG",
+        id: "Fine-Tuning LLM & RAG",
+      },
+      desc: {
+        en: "An Indonesian legal consultation assistant focused on employment regulations. Fine-tuned Llama 3 with Unsloth and QLoRA, then combined the model with a LangChain and ChromaDB RAG pipeline over 3,200+ chunks from four Indonesian labor-law documents to reduce hallucinations.",
+        id: "Asisten konsultasi hukum Indonesia yang berfokus pada regulasi ketenagakerjaan. Melakukan fine-tuning Llama 3 dengan Unsloth dan QLoRA, lalu menggabungkannya dengan pipeline RAG LangChain dan ChromaDB dari 3.200+ chunks empat dokumen hukum ketenagakerjaan untuk mengurangi halusinasi.",
+      },
+      tags: [
+        "Llama 3",
+        "Unsloth",
+        "QLoRA",
+        "LangChain",
+        "ChromaDB",
+        "Hugging Face",
+      ],
+      sourceUrl:
+        "https://huggingface.co/vikriahaikal/llama3-legal-bot/tree/main",
+      sourceLabel: { en: "Hugging Face", id: "Hugging Face" },
+      demoUrl: null,
+      media: {
+        type: "gif",
+        src: "public/media/projects/rag_ai.gif",
+        alt: "Preview Legal Assistance AI dengan pipeline RAG",
+      },
+      status: "completed",
+    },
+    {
       name: "Alifin — Interactive Hijaiyah Learning App",
       group: "ml",
       category: {
