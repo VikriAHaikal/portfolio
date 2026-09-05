@@ -31,6 +31,10 @@ portfolio/
 │   └── script.js       # Logika UI: tema, bahasa, typewriter, render dinamis
 └── public/
     ├── avatar.png      # Foto profil hero section
+    ├── certs/           # Gambar sertifikat
+    ├── media/
+    │   ├── brands/      # Logo proyek, kampus, perusahaan, dan organisasi
+    │   └── projects/    # GIF atau media demo proyek
     └── cv/
         └── CV_Vikri_A_Haikal.pdf   # File CV (untuk tombol Download CV)
 ```
@@ -56,6 +60,13 @@ Tidak perlu menyentuh `index.html` atau `script.js` untuk memperbarui konten.
 | `projects[]`     | Daftar proyek dengan tag, link GitHub, dan link demo            |
 | `skills[]`       | Ikon teknologi menggunakan kelas [Devicon](https://devicon.dev) |
 | `i18n`           | Semua label UI dalam dua bahasa (EN & ID)                       |
+
+### Aturan Media
+
+- Simpan logo di `public/media/brands/` dan GIF demo di `public/media/projects/`.
+- Gunakan nama file lowercase dengan tanda hubung, misalnya `kopkar-adis.png`.
+- Hubungkan aset melalui properti `logo` atau `media` pada entri terkait di `js/data.js`.
+- Gunakan `alt` yang menjelaskan isi logo atau preview agar tetap aksesibel.
 
 ---
 

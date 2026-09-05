@@ -25,7 +25,6 @@ const DATA = {
     },
   },
 
-  // ─── i18n — Semua teks UI dalam dua bahasa ────────────────────────────────
   i18n: {
     en: {
       hero: {
@@ -85,7 +84,6 @@ const DATA = {
     },
   },
 
-  // ─── About ────────────────────────────────────────────────────────────────
   about: {
     en: "I'm a fresh graduate in Informatics Engineering from Universitas Serang Raya, specializing in Machine Learning and Artificial Intelligence. As a Bangkit Academy alumnus (Machine Learning path, led by Google, GoTo & Traveloka), I've built end-to-end AI solutions — from model training to cloud deployment. Beyond the technical side, I bring experience in cross-functional tech project management, leading teams from planning through to production. I thrive on turning complex data into meaningful, real-world impact.",
     id: "Saya adalah fresh graduate Teknik Informatika dari Universitas Serang Raya dengan spesialisasi di Machine Learning dan Artificial Intelligence. Sebagai alumni Bangkit Academy jalur Machine Learning (Google, GoTo & Traveloka), saya telah membangun solusi AI end-to-end — dari pelatihan model hingga deployment di cloud. Di luar aspek teknis, saya memiliki pengalaman dalam manajemen proyek teknologi lintas fungsi, memimpin tim dari perencanaan hingga produksi. Saya antusias mengubah data kompleks menjadi dampak nyata.",
@@ -105,6 +103,10 @@ const DATA = {
         en: "Thesis: Implementation of the Dijkstra Algorithm in a Geographic Information System for Mapping the Nearest Distance to Temporary Waste Disposal Sites",
         id: "Skripsi: Implementasi Algoritma Dijkstra dalam Sistem Informasi Geografis untuk Pemetaan Jarak Terdekat ke Tempat Pembuangan Sampah Sementara",
       },
+      logo: {
+        src: "public/media/brands/unsera.png",
+        alt: "Logo Universitas Serang Raya",
+      },
       icon: "graduation",
     },
   ],
@@ -116,33 +118,97 @@ const DATA = {
     {
       name: "Machine Learning Specialization",
       issuer: "DeepLearning.AI · Coursera",
-      year: "2024",
+      year: "17 April 2024",
+      dateSort: "2024-04-17",
       skills: [
         "Supervised ML",
         "Advanced Learning Algorithms",
         "Unsupervised ML",
       ],
-      verifyUrl: "", // Isi dengan link verifikasi resmi Coursera
-      imageUrl: null, // Isi dengan scan/screenshot sertifikat asli
-      brandColor: "#0056D3", // Coursera blue
+      verifyUrl: "https://coursera.org/share/4e81cffc2fa2eb92c71288783fb3e384",
+      imageUrl: "public/certs/machine_learning.jpeg",
+      brandColor: "#0056D3",
     },
     {
-      name: "Bangkit Academy — Machine Learning Path",
-      issuer: "Google · GoTo · Traveloka · Bangkit",
-      year: "2024",
-      skills: ["TensorFlow", "Cloud ML Deployment", "Data Engineering"],
-      verifyUrl: "", // Isi dengan link verifikasi resmi Bangkit
-      imageUrl: null,
-      brandColor: "#34A853", // Google green
-    },
-    {
-      name: "Machine Learning Developer",
+      name: "Generative AI — Tingkat Mahir",
       issuer: "Dicoding Indonesia",
-      year: "2024",
-      skills: ["Scikit-Learn", "Feature Engineering", "Model Evaluation"],
-      verifyUrl: "", // Isi dengan link verifikasi resmi Dicoding
-      imageUrl: null,
-      brandColor: "#2D3E50", // Dicoding dark
+      year: "20 Agustus 2026",
+      dateSort: "2026-08-20",
+      skills: ["Generative AI", "Prompt Engineering", "AI Applications"],
+      verifyUrl:
+        "https://drive.google.com/file/d/1DY3E5KfrGV9YbQytwsKPZ6kyEzGdK8-1/view?usp=sharing",
+      imageUrl: "public/certs/gen_ai_mahir.jpeg",
+      brandColor: "#2D3E50",
+    },
+    {
+      name: "Generative AI — Tingkat Menengah",
+      issuer: "Dicoding Indonesia",
+      year: "30 Maret 2026",
+      dateSort: "2026-03-30",
+      skills: ["Generative AI", "Prompt Engineering", "AI Fundamentals"],
+      verifyUrl:
+        "https://drive.google.com/file/d/1Y_lNHK_ypCGdGQMEqAR1PcM-bS8AaPhC/view?usp=drive_link",
+      imageUrl: "public/certs/gen_ai_menengah.jpeg",
+      brandColor: "#2D3E50",
+    },
+    {
+      name: "Associate Data Analyst",
+      issuer: "BNSP",
+      year: "12 Maret 2025",
+      dateSort: "2025-03-12",
+      skills: ["Data Analysis", "Data Interpretation", "Analytics"],
+      verifyUrl:
+        "https://drive.google.com/file/d/1i74NfvWYFRohZ4D1bD36xZVrqnRXSHH_/view?usp=sharing",
+      imageUrl: "public/certs/associate_data_analyst_bnsp.jpg",
+      brandColor: "#0F766E",
+    },
+    {
+      name: "Certificate of Completion — Bangkit Academy",
+      issuer: "Bangkit Academy · Google · GoTo · Traveloka",
+      year: "16 Februari – 30 Juni 2024",
+      dateSort: "2024-06-30",
+      skills: ["Machine Learning", "TensorFlow", "Cloud Computing"],
+      verifyUrl:
+        "https://drive.google.com/file/d/1fs8Re1Yf_2sqTHLVvGKlN-4JMnLlPCbv/view?usp=sharing",
+      imageUrl: "public/certs/sertifikat_kelulusan_bangkit.jpg",
+      brandColor: "#34A853",
+    },
+    {
+      name: "Certificate of Participation — MSIB",
+      issuer: "Kampus Merdeka · MSIB",
+      year: "16 Februari – 30 Juni 2024",
+      dateSort: "2024-06-30",
+      skills: [
+        "Professional Development",
+        "Career Readiness",
+        "Industry Learning",
+      ],
+      verifyUrl:
+        "https://drive.google.com/file/d/1hNzjZM227GiwuP6HOW_ZaaPg4LQ9cyCd/view?usp=sharing",
+      imageUrl: "public/certs/sertifikat_peserta_msib.jpg",
+      brandColor: "#2563EB",
+    },
+    {
+      name: "Peserta Training of Trainer (ToT)",
+      issuer: "Training of Trainer",
+      year: "18 – 19 November 2023",
+      dateSort: "2023-11-19",
+      skills: ["Training Delivery", "Facilitation", "Presentation Skills"],
+      verifyUrl:
+        "https://drive.google.com/file/d/1Sa8DZ9vtmyf9NAInw2JjzE4jsKq0LKnh/view?usp=sharing",
+      imageUrl: "public/certs/sertifikat_tot.jpg",
+      brandColor: "#7C3AED",
+    },
+    {
+      name: "Certificate of Appreciation — Monitor",
+      issuer: "Monitor Program",
+      year: "18 – 19 Desember 2021",
+      dateSort: "2021-12-19",
+      skills: ["Event Support", "Coordination", "Communication"],
+      verifyUrl:
+        "https://drive.google.com/file/d/1pV8NvxIW0RO1o3lZAY2cChxpz7fXhkFO/view?usp=sharing",
+      imageUrl: "public/certs/sertifikat_monitor.png",
+      brandColor: "#EA580C",
     },
   ],
 
@@ -169,9 +235,16 @@ const DATA = {
     },
     {
       type: "professional",
-      role: { en: "Web Developer Intern", id: "Magang Web Developer" },
-      company: "Koperasi Konsumen PT Adis Dimension Footwear",
-      period: "2023",
+      role: {
+        en: "Work Practice Program (KKP)",
+        id: "Kuliah Kerja Praktek (KKP)",
+      },
+      company: "Koperasi Konsumen Karyawan PT Adis Dimension Footwear",
+      period: "07 Agustus – 08 September 2023",
+      logo: {
+        src: "public/media/brands/kopkar-adis.png",
+        alt: "Logo KOPKAR ADIS",
+      },
       tags: [
         "Web Development",
         "Frontend",
@@ -191,6 +264,10 @@ const DATA = {
       },
       company: "Himpunan Mahasiswa Teknik Informatika (HIMATIF)",
       period: "2023 – 2024",
+      logo: {
+        src: "public/media/brands/himatif.png",
+        alt: "Logo HIMATIF",
+      },
       tags: [
         "Administration",
         "Documentation",
@@ -240,18 +317,18 @@ const DATA = {
       demoLabel: { en: "Google AI Studio", id: "Google AI Studio" },
       media: {
         type: "gif",
-        src: "alifin.gif",
+        src: "public/media/projects/alifin.gif",
         alt: "Preview aplikasi pembelajaran Alifin",
       },
       status: "completed",
       date: "May 2026",
     },
     {
-      name: "Drink't App — Nutrition Scanner",
+      name: "Drinkn't",
       group: "ml",
       category: {
-        en: "Machine Learning & Mobile",
-        id: "Machine Learning & Mobile",
+        en: "Capstone Project",
+        id: "Capstone Project",
       },
       desc: {
         en: "A mobile application that scans nutrition tables on packaged drinks to monitor sugar intake in real-time. Led a cross-functional team of 6, managing backend deployment on GCP and integrating a custom TensorFlow Lite model trained on a self-curated dataset.",
@@ -260,15 +337,19 @@ const DATA = {
       tags: ["TensorFlow Lite", "Google Cloud", "Python", "Android Dev", "GCP"],
       githubUrl: "https://github.com/VikriAHaikal/Capstone",
       demoUrl: null,
+      logo: {
+        src: "public/media/brands/drinkt.png",
+        alt: "Logo Drink't",
+      },
       media: {
         type: "gif",
-        src: "drinknt.gif",
+        src: "public/media/projects/drinknt.gif",
         alt: "Preview aplikasi Drink't Nutrition Scanner",
       },
       status: "completed",
     },
     {
-      name: "KOPKAR ADIS — Company Profile Web",
+      name: "Company Profile Kopkar Adis",
       group: "other",
       category: {
         en: "Fullstack Web Development",
@@ -288,25 +369,15 @@ const DATA = {
       ],
       githubUrl: "https://github.com/VikriAHaikal/koperasi-adis-profile",
       demoUrl: null,
+      logo: {
+        src: "public/media/brands/kopkar-adis.png",
+        alt: "Logo KOPKAR ADIS",
+      },
       media: {
         type: "gif",
-        src: "compro_adis.gif",
+        src: "public/media/projects/compro-adis.gif",
         alt: "Preview website KOPKAR ADIS",
       },
-      status: "ongoing",
-    },
-    {
-      name: "Minimalist Developer Portfolio",
-      group: "other",
-      category: { en: "Frontend Web", id: "Frontend Web" },
-      desc: {
-        en: "A clean, fast personal developer portfolio built with semantic vanilla HTML5, custom CSS design tokens, and vanilla JS. Features dark/light mode and bilingual EN/ID support.",
-        id: "Website portfolio personal yang bersih dan cepat, dibangun menggunakan HTML5 semantik, custom CSS design tokens, dan Vanilla JS. Dilengkapi mode gelap/terang dan dukungan dua bahasa EN/ID.",
-      },
-      tags: ["HTML5", "CSS3", "JavaScript", "i18n"],
-      githubUrl: "https://github.com/VikriAHaikal/portfolio",
-      demoUrl: null,
-      media: null,
       status: "ongoing",
     },
   ],

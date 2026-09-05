@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderExperience();
   renderEducation();
   renderCertifications();
+  initCertificationCards();
   renderProjects();
   initProjectMedia();
   renderSkills();
@@ -122,14 +123,19 @@ function renderExperience() {
       </div>
       <div class="timeline-card">
         <div class="timeline-header">
-          <h3 class="timeline-role"
-            data-en="${exp.role.en}"
-            data-id="${exp.role.id}">
-            ${exp.role[currentLang]}
-          </h3>
+          <div class="timeline-identity">
+            ${exp.logo ? `<img class="timeline-logo" src="${exp.logo.src}" alt="${exp.logo.alt}" loading="lazy" />` : ""}
+            <div class="timeline-identity-copy">
+              <h3 class="timeline-role"
+                data-en="${exp.role.en}"
+                data-id="${exp.role.id}">
+                ${exp.role[currentLang]}
+              </h3>
+              <p class="timeline-company">${exp.company}</p>
+            </div>
+          </div>
           <span class="timeline-period">${exp.period}</span>
         </div>
-        <p class="timeline-company">${exp.company}</p>
         <p class="timeline-desc"
             data-en="${descEn}"
             data-id="${descId}">
@@ -166,11 +172,7 @@ function renderEducation() {
     .map(
       (edu) => `
     <div class="edu-card">
-      <div class="edu-card-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
-        </svg>
-      </div>
+      ${edu.logo ? `<img class="edu-logo" src="${edu.logo.src}" alt="${edu.logo.alt}" loading="lazy" />` : ""}
       <div class="edu-card-body">
         <div class="edu-card-header">
           <div>
@@ -186,17 +188,17 @@ function renderEducation() {
             <span class="edu-gpa">GPA ${edu.gpa}</span>
           </div>
         </div>
-        ${
-          edu.thesis && Object.keys(edu.thesis).length > 0
-            ? `
-        <p class="edu-thesis"
-          data-en="${edu.thesis.en}"
-          data-id="${edu.thesis.id}">
-          ${edu.thesis[currentLang]}
-        </p>`
-            : ""
-        }
       </div>
+      ${
+        edu.thesis && Object.keys(edu.thesis).length > 0
+          ? `
+      <p class="edu-thesis"
+        data-en="${edu.thesis.en}"
+        data-id="${edu.thesis.id}">
+        ${edu.thesis[currentLang]}
+      </p>`
+          : ""
+      }
     </div>`,
     )
     .join("");
@@ -211,7 +213,8 @@ function renderCertifications() {
   const verifyLabelId = DATA.i18n.id.certVerify || "Verifikasi kredensial";
   const verifyLabel = currentLang === "en" ? verifyLabelEn : verifyLabelId;
 
-  container.innerHTML = DATA.certifications
+  container.innerHTML = [...DATA.certifications]
+    .sort((a, b) => (b.dateSort || "").localeCompare(a.dateSort || ""))
     .map((cert) => {
       const hasLink =
         cert.verifyUrl && cert.verifyUrl !== "#" && cert.verifyUrl !== "";
@@ -222,13 +225,13 @@ function renderCertifications() {
           : "";
 
       return `
-    <article class="cert-card fade-in">
+    <article class="cert-card fade-in"${hasLink ? ` data-cert-url="${cert.verifyUrl}" role="link" tabindex="0"` : ""}>
       ${
         hasImage
           ? `
-      <a href="${cert.imageUrl}" target="_blank" rel="noopener noreferrer" class="cert-preview" aria-label="${currentLang === "en" ? `Open ${cert.name} certificate preview` : `Buka preview sertifikat ${cert.name}`}" >
+      <a href="${hasLink ? cert.verifyUrl : cert.imageUrl}" target="_blank" rel="noopener noreferrer" class="cert-preview" aria-label="${currentLang === "en" ? `Verify ${cert.name} certificate` : `Verifikasi sertifikat ${cert.name}`}" >
         <img src="${cert.imageUrl}" alt="${currentLang === "en" ? `Preview of ${cert.name} certificate` : `Preview sertifikat ${cert.name}`}" loading="lazy" />
-        <span class="cert-preview-label" data-en="Open preview" data-id="Buka preview">${currentLang === "en" ? "Open preview" : "Buka preview"}</span>
+        <span class="cert-preview-label" data-en="Verify certificate" data-id="Verifikasi sertifikat">${currentLang === "en" ? "Verify certificate" : "Verifikasi sertifikat"}</span>
       </a>`
           : `
       <div class="cert-preview cert-preview--empty" aria-hidden="true">
@@ -269,20 +272,34 @@ function renderCertifications() {
           </span>
         `
         }
-        ${
-          hasImage
-            ? `
-          <a href="${cert.imageUrl}" target="_blank" rel="noopener noreferrer" class="cert-action-btn cert-action-btn--preview">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-            <span data-en="Preview" data-id="Pratinjau">${currentLang === "en" ? "Preview" : "Pratinjau"}</span>
-          </a>
-        `
-            : ""
-        }
       </div>
     </article>`;
     })
     .join("");
+}
+
+function initCertificationCards() {
+  const container = $("#certGrid");
+  if (!container) return;
+
+  const openVerification = (card) => {
+    if (!card?.dataset.certUrl) return;
+    window.open(card.dataset.certUrl, "_blank", "noopener,noreferrer");
+  };
+
+  container.addEventListener("click", (event) => {
+    const card = event.target.closest(".cert-card");
+    if (!card || event.target.closest("a, button")) return;
+    openVerification(card);
+  });
+
+  container.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const card = event.target.closest(".cert-card");
+    if (!card) return;
+    event.preventDefault();
+    openVerification(card);
+  });
 }
 
 // ─── 4b. Render About Stats ───────────────────────────────────────────────────
@@ -347,11 +364,6 @@ function renderProjects() {
     <article class="project-card${featured ? " project-card--featured" : " project-card--other"} fade-in">
       ${buildProjectMedia(proj)}
       <div class="project-card-header">
-        <span class="project-category"
-          data-en="${proj.category.en}"
-          data-id="${proj.category.id}">
-          ${proj.category[currentLang]}
-        </span>
         ${
           proj.status
             ? `
@@ -367,7 +379,17 @@ function renderProjects() {
             : ""
         }
       </div>
-      <h3 class="project-name">${proj.name}</h3>
+      <div class="project-identity">
+        ${proj.logo ? `<img class="project-logo" src="${proj.logo.src}" alt="${proj.logo.alt}" loading="lazy" />` : ""}
+        <div class="project-identity-copy">
+          <span class="project-category"
+            data-en="${proj.category.en}"
+            data-id="${proj.category.id}">
+            ${proj.category[currentLang]}
+          </span>
+          <h3 class="project-name">${proj.name}</h3>
+        </div>
+      </div>
       <p class="project-desc"
         data-en="${proj.desc.en}"
         data-id="${proj.desc.id}">

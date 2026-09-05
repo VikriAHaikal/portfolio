@@ -840,6 +840,19 @@ ul {
   margin-bottom: 4px;
 }
 
+.timeline-identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+  flex: 1 1 320px;
+}
+
+.timeline-identity-copy {
+  min-width: 0;
+  padding-top: 2px;
+}
+
 .timeline-role {
   font-size: 1rem;
   font-weight: 700;
@@ -861,6 +874,67 @@ ul {
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 12px;
+}
+
+.project-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.project-identity {
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.project-identity-copy {
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.timeline-logo,
+.edu-logo,
+.project-logo {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  object-fit: contain;
+  border: 1px solid var(--border-hover);
+  border-radius: 12px;
+  padding: 7px;
+  background: #fff;
+  box-shadow: 0 5px 0 var(--accent-bg);
+  transition:
+    transform var(--t),
+    box-shadow var(--t),
+    border-color var(--t);
+}
+
+.timeline-identity:hover .timeline-logo,
+.edu-card:hover .edu-logo,
+.project-identity:hover .project-logo {
+  border-color: var(--accent);
+  box-shadow: 0 3px 0 var(--accent-bg);
+  transform: translateY(2px);
+}
+
+.timeline-identity-copy .timeline-company {
+  margin-bottom: 12px;
+}
+
+.project-identity .project-name {
+  margin-bottom: 0;
+}
+
+.project-identity-copy .project-category {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.project-identity .project-name {
+  min-width: 0;
 }
 
 .timeline-desc {
@@ -1565,6 +1639,7 @@ ul {
 
 .edu-card {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: flex-start;
   background: var(--bg-card);
@@ -1579,23 +1654,6 @@ ul {
 
 .edu-card:hover {
   box-shadow: var(--shadow-md);
-}
-
-.edu-card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius);
-  background: var(--accent-bg);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.edu-card-icon svg {
-  width: 22px;
-  height: 22px;
 }
 
 .edu-card-body {
@@ -1660,6 +1718,7 @@ ul {
 }
 
 .edu-thesis {
+  flex: 0 0 100%;
   font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.6;
@@ -1670,10 +1729,6 @@ ul {
 }
 
 @media (max-width: 600px) {
-  .edu-card {
-    flex-direction: column;
-    gap: 14px;
-  }
   .edu-card-header {
     flex-direction: column;
     align-items: flex-start;
@@ -1705,6 +1760,15 @@ ul {
     transform var(--t);
   position: relative;
   overflow: hidden;
+}
+
+.cert-card[data-cert-url] {
+  cursor: pointer;
+}
+
+.cert-card[data-cert-url]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .cert-preview {
@@ -1874,6 +1938,16 @@ ul {
   background: var(--accent-hover);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   transform: translateY(-1px);
+}
+
+[data-theme="dark"] .cert-action-btn--verify {
+  background: #f4f5f7;
+  color: #111318;
+}
+
+[data-theme="dark"] .cert-action-btn--verify:hover {
+  background: #ffffff;
+  color: #111318;
 }
 
 .cert-action-btn--preview {
@@ -2078,6 +2152,23 @@ ul {
   .project-card--featured,
   .project-card--other {
     padding: 20px;
+  }
+  .timeline-logo,
+  .edu-logo,
+  .project-logo {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+    padding: 6px;
+  }
+  .project-identity {
+    gap: 10px;
+  }
+  .timeline-identity {
+    flex-basis: 100%;
+  }
+  .timeline-header .timeline-period {
+    margin-left: 64px;
   }
   .project-media {
     width: calc(100% + 40px);
