@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderEducation();
   renderCertifications();
   initCertificationCards();
+  initCertificationFilters();
   renderProjects();
+  initProjectFilters();
   initProjectMedia();
   renderSkills();
   applyLanguage(currentLang);
@@ -225,7 +227,7 @@ function renderCertifications() {
           : "";
 
       return `
-    <article class="cert-card fade-in"${hasLink ? ` data-cert-url="${cert.verifyUrl}" role="link" tabindex="0"` : ""}>
+    <article class="cert-card fade-in" data-cert-category="${cert.category || "other"}"${hasLink ? ` data-cert-url="${cert.verifyUrl}" role="link" tabindex="0"` : ""}>
       ${
         hasImage
           ? `
@@ -276,6 +278,41 @@ function renderCertifications() {
     </article>`;
     })
     .join("");
+}
+
+function initCertificationFilters() {
+  const container = $("#certGrid");
+  const filters = $$("[data-cert-filter]");
+  if (!container || !filters.length) return;
+
+  const emptyMessage = document.createElement("p");
+  emptyMessage.className = "cert-filter-empty";
+  emptyMessage.dataset.en = "No certificates in this category yet.";
+  emptyMessage.dataset.id = "Belum ada sertifikat dalam kategori ini.";
+  emptyMessage.textContent =
+    currentLang === "en" ? emptyMessage.dataset.en : emptyMessage.dataset.id;
+  emptyMessage.hidden = true;
+  container.after(emptyMessage);
+
+  filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      const selected = filter.dataset.certFilter;
+      filters.forEach((item) => {
+        const isActive = item === filter;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      let visibleCount = 0;
+      container.querySelectorAll("[data-cert-category]").forEach((card) => {
+        const visible =
+          selected === "all" || card.dataset.certCategory === selected;
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+      emptyMessage.hidden = visibleCount > 0;
+    });
+  });
 }
 
 function initCertificationCards() {
@@ -384,7 +421,7 @@ function renderProjects() {
   const mlProjects = DATA.projects.filter((p) => p.group === "ml");
 
   const buildCard = (proj, featured = false) => `
-    <article class="project-card${featured ? " project-card--featured" : " project-card--other"} fade-in">
+    <article class="project-card${featured ? " project-card--featured" : " project-card--other"} fade-in" data-project-group="${proj.group}">
       ${buildProjectMedia(proj)}
       <div class="project-card-header">
         ${
@@ -477,6 +514,35 @@ function renderProjects() {
         : ""
     }
   `;
+}
+
+function initProjectFilters() {
+  const container = $("#projectsGrid");
+  const filters = $$("[data-project-filter]");
+  if (!container || !filters.length) return;
+
+  filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      const selected = filter.dataset.projectFilter;
+      filters.forEach((item) => {
+        const isActive = item === filter;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      container.querySelectorAll("[data-project-group]").forEach((card) => {
+        const visible =
+          selected === "all" || card.dataset.projectGroup === selected;
+        card.classList.toggle("is-filtered-out", !visible);
+      });
+      container.querySelectorAll(".projects-group").forEach((group) => {
+        const hasVisibleCard = [
+          ...group.querySelectorAll("[data-project-group]"),
+        ].some((card) => !card.classList.contains("is-filtered-out"));
+        group.classList.toggle("is-filtered-out", !hasVisibleCard);
+      });
+    });
+  });
 }
 
 function buildProjectMedia(proj) {

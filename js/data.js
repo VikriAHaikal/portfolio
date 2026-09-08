@@ -40,6 +40,7 @@ const DATA = {
         title: "Projects",
         fullstackTitle: "Fullstack Web Projects",
         mlTitle: "ML & AI Projects",
+        filterAll: "All projects",
         sourceCode: "GitHub",
         liveDemo: "Live Demo",
         private: "🔒 Private",
@@ -68,6 +69,7 @@ const DATA = {
         title: "Proyek",
         fullstackTitle: "Proyek Web Fullstack",
         mlTitle: "Proyek ML & AI",
+        filterAll: "Semua proyek",
         sourceCode: "GitHub",
         liveDemo: "Live Demo",
         private: "🔒 Privat",
@@ -128,6 +130,7 @@ const DATA = {
       verifyUrl: "https://coursera.org/share/4e81cffc2fa2eb92c71288783fb3e384",
       imageUrl: "public/certs/machine_learning.jpeg",
       brandColor: "#0056D3",
+      category: "ml",
     },
     {
       name: "Generative AI — Tingkat Mahir",
@@ -139,6 +142,7 @@ const DATA = {
         "https://drive.google.com/file/d/1DY3E5KfrGV9YbQytwsKPZ6kyEzGdK8-1/view?usp=sharing",
       imageUrl: "public/certs/gen_ai_mahir.jpeg",
       brandColor: "#2D3E50",
+      category: "ml",
     },
     {
       name: "Generative AI — Tingkat Menengah",
@@ -150,6 +154,7 @@ const DATA = {
         "https://drive.google.com/file/d/1Y_lNHK_ypCGdGQMEqAR1PcM-bS8AaPhC/view?usp=drive_link",
       imageUrl: "public/certs/gen_ai_menengah.jpeg",
       brandColor: "#2D3E50",
+      category: "ml",
     },
     {
       name: "Associate Data Analyst",
@@ -161,6 +166,7 @@ const DATA = {
         "https://drive.google.com/file/d/1i74NfvWYFRohZ4D1bD36xZVrqnRXSHH_/view?usp=sharing",
       imageUrl: "public/certs/associate_data_analyst_bnsp.jpg",
       brandColor: "#0F766E",
+      category: "other",
     },
     {
       name: "Certificate of Completion — Bangkit Academy",
@@ -172,6 +178,7 @@ const DATA = {
         "https://drive.google.com/file/d/1fs8Re1Yf_2sqTHLVvGKlN-4JMnLlPCbv/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_kelulusan_bangkit.jpg",
       brandColor: "#34A853",
+      category: "ml",
     },
     {
       name: "Certificate of Participation — MSIB",
@@ -187,6 +194,7 @@ const DATA = {
         "https://drive.google.com/file/d/1hNzjZM227GiwuP6HOW_ZaaPg4LQ9cyCd/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_peserta_msib.jpg",
       brandColor: "#2563EB",
+      category: "other",
     },
     {
       name: "Peserta Training of Trainer (ToT)",
@@ -198,6 +206,7 @@ const DATA = {
         "https://drive.google.com/file/d/1Sa8DZ9vtmyf9NAInw2JjzE4jsKq0LKnh/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_tot.jpg",
       brandColor: "#7C3AED",
+      category: "other",
     },
     {
       name: "Certificate of Appreciation — Monitor",
@@ -209,6 +218,7 @@ const DATA = {
         "https://drive.google.com/file/d/1pV8NvxIW0RO1o3lZAY2cChxpz7fXhkFO/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_monitor.png",
       brandColor: "#EA580C",
+      category: "other",
     },
   ],
 

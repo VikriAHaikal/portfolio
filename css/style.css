@@ -1064,7 +1064,58 @@ ul {
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 34px;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: -24px 0 36px;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-filter {
+  position: relative;
+  padding: 0 0 10px;
+  border: 0;
+  color: var(--text-muted);
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: color var(--t);
+}
+
+.project-filter:hover,
+.project-filter.is-active {
+  color: var(--text);
+}
+
+.project-filter::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t);
+}
+
+.project-filter.is-active::after {
+  transform: scaleX(1);
+}
+
+.project-filter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.project-card.is-filtered-out,
+.projects-group.is-filtered-out {
+  display: none;
 }
 
 .project-card {
@@ -1080,7 +1131,10 @@ ul {
     box-shadow var(--t),
     transform var(--t);
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
+
 .project-card:hover {
   border-color: var(--accent);
   box-shadow: var(--shadow-md);
@@ -1847,6 +1901,59 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: 20px;
+}
+
+.cert-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 24px 0 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cert-filter {
+  position: relative;
+  padding: 0 0 10px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: color var(--t);
+}
+
+.cert-filter:hover,
+.cert-filter.is-active {
+  color: var(--text);
+}
+
+.cert-filter::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t);
+}
+
+.cert-filter.is-active::after {
+  transform: scaleX(1);
+}
+
+.cert-filter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.cert-filter-empty {
+  padding: 28px 0;
+  color: var(--text-subtle);
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .cert-card {
