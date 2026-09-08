@@ -18,10 +18,10 @@ const DATA = {
       github: "https://github.com/VikriAHaikal",
       linkedin: "https://www.linkedin.com/in/vikriahaikal",
     },
-    roles: ["Machine Learning & AI Enthusiast", "Software Engineer"],
+    roles: ["Fullstack Developer", "AI Enthusiast"],
     heroSubtitle: {
-      en: "Informatics Engineering graduate specializing in Machine Learning & AI. Bangkit Academy alumni (Google · GoTo · Traveloka). Passionate about building intelligent systems and deployable AI solutions.",
-      id: "Lulusan Teknik Informatika dengan spesialisasi di Machine Learning & AI. Alumni Bangkit Academy (Google · GoTo · Traveloka). Bersemangat membangun sistem cerdas dan solusi AI yang dapat di-deploy.",
+      en: "Informatics Engineering graduate building end-to-end web applications and practical AI solutions. Bangkit Academy alumni (Google · GoTo · Traveloka) with experience across frontend, backend, cloud, and machine learning.",
+      id: "Lulusan Teknik Informatika yang membangun aplikasi web end-to-end dan solusi AI yang relevan. Alumni Bangkit Academy (Google · GoTo · Traveloka) dengan pengalaman di frontend, backend, cloud, dan machine learning.",
     },
   },
 
@@ -38,8 +38,8 @@ const DATA = {
       certifications: { title: "Certifications" },
       projects: {
         title: "Projects",
+        fullstackTitle: "Fullstack Web Projects",
         mlTitle: "ML & AI Projects",
-        otherTitle: "Other Projects",
         sourceCode: "GitHub",
         liveDemo: "Live Demo",
         private: "🔒 Private",
@@ -66,8 +66,8 @@ const DATA = {
       certifications: { title: "Sertifikasi" },
       projects: {
         title: "Proyek",
+        fullstackTitle: "Proyek Web Fullstack",
         mlTitle: "Proyek ML & AI",
-        otherTitle: "Proyek Lainnya",
         sourceCode: "GitHub",
         liveDemo: "Live Demo",
         private: "🔒 Privat",
@@ -85,8 +85,8 @@ const DATA = {
   },
 
   about: {
-    en: "I'm a fresh graduate in Informatics Engineering from Universitas Serang Raya, specializing in Machine Learning and Artificial Intelligence. As a Bangkit Academy alumnus (Machine Learning path, led by Google, GoTo & Traveloka), I've built end-to-end AI solutions — from model training to cloud deployment. Beyond the technical side, I bring experience in cross-functional tech project management, leading teams from planning through to production. I thrive on turning complex data into meaningful, real-world impact.",
-    id: "Saya adalah fresh graduate Teknik Informatika dari Universitas Serang Raya dengan spesialisasi di Machine Learning dan Artificial Intelligence. Sebagai alumni Bangkit Academy jalur Machine Learning (Google, GoTo & Traveloka), saya telah membangun solusi AI end-to-end — dari pelatihan model hingga deployment di cloud. Di luar aspek teknis, saya memiliki pengalaman dalam manajemen proyek teknologi lintas fungsi, memimpin tim dari perencanaan hingga produksi. Saya antusias mengubah data kompleks menjadi dampak nyata.",
+    en: "I'm a fresh graduate in Informatics Engineering from Universitas Serang Raya who builds end-to-end web applications and practical AI solutions. As a Bangkit Academy alumnus (Machine Learning path, led by Google, GoTo & Traveloka), I've worked across frontend, backend, cloud deployment, and machine learning. I enjoy turning product requirements into reliable software with useful intelligence behind it.",
+    id: "Saya adalah fresh graduate Teknik Informatika dari Universitas Serang Raya yang membangun aplikasi web end-to-end dan solusi AI yang relevan. Sebagai alumni Bangkit Academy jalur Machine Learning (Google, GoTo & Traveloka), saya memiliki pengalaman di frontend, backend, cloud deployment, dan machine learning. Saya senang menerjemahkan kebutuhan produk menjadi software yang andal dengan kecerdasan yang bermanfaat.",
   },
 
   // ─── Education ────────────────────────────────────────────────────────────
@@ -290,8 +290,8 @@ const DATA = {
   ],
 
   // ─── Projects ─────────────────────────────────────────────────────────────
-  // group: 'ml'    → tampil di bagian "ML & AI Projects" (featured, lebih besar)
-  // group: 'other' → tampil di bagian "Other Projects" (compact, secondary)
+  // group: 'fullstack' → tampil sebagai proyek utama
+  // group: 'ml'        → tampil sebagai proyek spesialisasi AI
   projects: [
     {
       name: "Legal Assistance AI",
@@ -325,7 +325,7 @@ const DATA = {
     },
     {
       name: "Alifin — Interactive Hijaiyah Learning App",
-      group: "ml",
+      group: "fullstack",
       category: {
         en: "Full-Stack Education & AI",
         id: "Edukasi Full-Stack & AI",
@@ -380,7 +380,7 @@ const DATA = {
     },
     {
       name: "Company Profile Kopkar Adis",
-      group: "other",
+      group: "fullstack",
       category: {
         en: "Fullstack Web Development",
         id: "Pengembangan Web Fullstack",
@@ -413,18 +413,8 @@ const DATA = {
   ],
 
   // ─── Skills ───────────────────────────────────────────────────────────────
-  // Diurutkan: ML/AI dulu → Cloud → Web/Backend → DB → Tools
+  // Diurutkan untuk positioning Fullstack terlebih dahulu, lalu AI dan deployment.
   skills: [
-    // ML & AI
-    { name: "Python", icon: "devicon-python-plain" },
-    { name: "TensorFlow", icon: "devicon-tensorflow-original" },
-    { name: "Keras", icon: "devicon-keras-plain" },
-    // Cloud & Deployment
-    { name: "Google Cloud", icon: "devicon-googlecloud-plain" },
-    { name: "Firebase", icon: "devicon-firebase-plain" },
-    { name: "Supabase", icon: "devicon-supabase-plain" },
-    { name: "Docker", icon: "devicon-docker-plain" },
-    { name: "Vercel", icon: "devicon-vercel-plain" },
     // Web & Frontend
     { name: "JavaScript", icon: "devicon-javascript-plain" },
     { name: "TypeScript", icon: "devicon-typescript-plain" },
@@ -437,6 +427,16 @@ const DATA = {
     // Database
     { name: "MySQL", icon: "devicon-mysql-plain" },
     { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
+    { name: "Supabase", icon: "devicon-supabase-plain" },
+    // Cloud & Deployment
+    { name: "Google Cloud", icon: "devicon-googlecloud-plain" },
+    { name: "Firebase", icon: "devicon-firebase-plain" },
+    { name: "Docker", icon: "devicon-docker-plain" },
+    { name: "Vercel", icon: "devicon-vercel-plain" },
+    // ML & AI
+    { name: "Python", icon: "devicon-python-plain" },
+    { name: "TensorFlow", icon: "devicon-tensorflow-original" },
+    { name: "Keras", icon: "devicon-keras-plain" },
     // Tools
     { name: "Git", icon: "devicon-git-plain" },
     { name: "GitHub", icon: "devicon-github-plain" },

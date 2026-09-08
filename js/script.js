@@ -349,7 +349,7 @@ function renderAboutStats() {
     .join("");
 }
 
-// ─── 5. Render Projects (2-group: ML/AI + Other) ──────────────────────────────
+// ─── 5. Render Projects (Fullstack primary + ML/AI specialization) ───────────
 function renderProjects() {
   const container = $("#projectsGrid");
   if (!container) return;
@@ -357,8 +357,10 @@ function renderProjects() {
   const githubIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>`;
   const extIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
 
+  const fullstackProjects = DATA.projects.filter(
+    (p) => p.group === "fullstack",
+  );
   const mlProjects = DATA.projects.filter((p) => p.group === "ml");
-  const otherProjects = DATA.projects.filter((p) => p.group === "other");
 
   const buildCard = (proj, featured = false) => `
     <article class="project-card${featured ? " project-card--featured" : " project-card--other"} fade-in">
@@ -416,38 +418,39 @@ function renderProjects() {
       </div>
     </article>`;
 
+  const fullstackTitle = DATA.i18n[currentLang].projects.fullstackTitle;
   const mlTitle = DATA.i18n[currentLang].projects.mlTitle;
-  const otherTitle = DATA.i18n[currentLang].projects.otherTitle;
 
   container.innerHTML = `
     ${
-      mlProjects.length
+      fullstackProjects.length
         ? `
       <div class="projects-group">
         <h3 class="projects-group-title"
-          data-en="${DATA.i18n.en.projects.mlTitle}"
-          data-id="${DATA.i18n.id.projects.mlTitle}">
-          <span class="projects-group-badge projects-group-badge--ml">ML &amp; AI</span>
-          ${mlTitle}
+          data-en="${DATA.i18n.en.projects.fullstackTitle}"
+          data-id="${DATA.i18n.id.projects.fullstackTitle}">
+          <span class="projects-group-badge projects-group-badge--fullstack">FULLSTACK</span>
+          ${fullstackTitle}
         </h3>
         <div class="projects-group-grid projects-group-grid--featured">
-          ${mlProjects.map((p) => buildCard(p, true)).join("")}
+          ${fullstackProjects.map((p) => buildCard(p, true)).join("")}
         </div>
       </div>`
         : ""
     }
 
     ${
-      otherProjects.length
+      mlProjects.length
         ? `
       <div class="projects-group projects-group--secondary">
         <h3 class="projects-group-title projects-group-title--secondary"
-          data-en="${DATA.i18n.en.projects.otherTitle}"
-          data-id="${DATA.i18n.id.projects.otherTitle}">
-          ${otherTitle}
+          data-en="${DATA.i18n.en.projects.mlTitle}"
+          data-id="${DATA.i18n.id.projects.mlTitle}">
+          <span class="projects-group-badge projects-group-badge--ml">ML &amp; AI</span>
+          ${mlTitle}
         </h3>
         <div class="projects-group-grid projects-group-grid--other">
-          ${otherProjects.map((p) => buildCard(p, false)).join("")}
+          ${mlProjects.map((p) => buildCard(p, false)).join("")}
         </div>
       </div>`
         : ""
@@ -524,27 +527,27 @@ function renderSkills() {
   // Grouped skill categories
   const groups = [
     {
-      label: { en: "Machine Learning & AI", id: "Machine Learning & AI" },
+      label: {
+        en: "Web & Backend Development",
+        id: "Pengembangan Web & Backend",
+      },
       start: 0,
-      end: 3,
+      end: 7,
     },
+    { label: { en: "Databases", id: "Basis Data" }, start: 7, end: 10 },
     {
       label: {
         en: "Cloud, MLOps & Deployment",
         id: "Cloud, MLOps & Deployment",
       },
-      start: 3,
-      end: 8,
+      start: 10,
+      end: 14,
     },
     {
-      label: {
-        en: "Web & Backend Development",
-        id: "Pengembangan Web & Backend",
-      },
-      start: 8,
-      end: 15,
+      label: { en: "Machine Learning & AI", id: "Machine Learning & AI" },
+      start: 14,
+      end: 17,
     },
-    { label: { en: "Databases", id: "Basis Data" }, start: 15, end: 17 },
     {
       label: { en: "Developer Tools", id: "Tools & Workflow" },
       start: 17,
@@ -757,7 +760,8 @@ function initScrollAnimations() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          obs.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove("visible");
         }
       });
     },
