@@ -315,6 +315,9 @@ function renderAboutStats() {
     {
       value: "Bangkit",
       unit: "2024",
+      image: "journey_bangkit.png",
+      imageAlt: "Journey Bangkit Academy Vikri A. Haikal",
+      href: "https://www.linkedin.com/in/vikriahaikal/overlay/Position/2512203100/treasury/?profileId=ACoAADZ8OIIBZL9tQFZnbrRTLqlwe41xaNsUZbA",
       label: { en: "ML Path Graduate", id: "Lulusan ML Path" },
     },
     {
@@ -334,6 +337,23 @@ function renderAboutStats() {
   container.innerHTML = stats
     .map(
       (s) => `
+    ${
+      s.image
+        ? `
+    <a class="about-stat-card about-stat-card--image" href="${s.href}" target="_blank" rel="noopener noreferrer"
+      aria-label="${currentLang === "en" ? "View Bangkit journey on LinkedIn" : "Lihat journey Bangkit di LinkedIn"}">
+      <img src="${s.image}" alt="${s.imageAlt}" loading="lazy" />
+      <span class="about-stat-image-overlay">
+        <span class="about-stat-image-title">${s.value} ${s.unit}</span>
+        <span class="about-stat-image-action">${currentLang === "en" ? "View on LinkedIn" : "Lihat di LinkedIn"}</span>
+      </span>
+      <span class="about-stat-label"
+        data-en="${s.label.en}"
+        data-id="${s.label.id}">
+        ${s.label[currentLang]}
+      </span>
+    </a>`
+        : `
     <div class="about-stat-card">
       <div class="about-stat-top">
         <span class="about-stat-val">${s.value}</span>
@@ -344,7 +364,8 @@ function renderAboutStats() {
         data-id="${s.label.id}">
         ${s.label[currentLang]}
       </span>
-    </div>`,
+    </div>`
+    }`,
     )
     .join("");
 }

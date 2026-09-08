@@ -721,6 +721,73 @@ ul {
   box-shadow: var(--shadow-md);
 }
 
+.about-stat-card--image {
+  position: relative;
+  min-height: 150px;
+  overflow: hidden;
+  padding: 0;
+  color: var(--text);
+}
+
+.about-stat-card--image img {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  object-fit: cover;
+  transition: transform var(--t-slow);
+}
+
+.about-stat-card--image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 20%,
+    rgba(15, 23, 42, 0.82) 100%
+  );
+}
+
+.about-stat-card--image:hover img,
+.about-stat-card--image:focus-visible img {
+  transform: scale(1.05);
+}
+
+.about-stat-image-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: auto 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #fff;
+}
+
+.about-stat-image-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.about-stat-image-action {
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0.82;
+}
+
+.about-stat-card--image .about-stat-label {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 14px;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(15, 23, 42, 0.5);
+}
+
+.about-stat-card--image:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .about-stat-top {
   display: flex;
   align-items: baseline;
