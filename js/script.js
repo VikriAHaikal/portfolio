@@ -549,7 +549,10 @@ function renderSkills() {
       end: 17,
     },
     {
-      label: { en: "Developer Tools", id: "Tools & Workflow" },
+      label: {
+        en: "Developer Tools & Documentation",
+        id: "Tools & Dokumentasi",
+      },
       start: 17,
       end: DATA.skills.length,
     },
@@ -570,7 +573,7 @@ function renderSkills() {
           .map(
             (skill) => `
           <div class="skill-icon-card fade-in">
-            <i class="${skill.icon} colored" aria-hidden="true"></i>
+            ${skill.iconUrl ? `<img class="skill-icon-image" src="${skill.iconUrl}" alt="" aria-hidden="true" />` : `<i class="${skill.icon} colored" aria-hidden="true"></i>`}
             <span class="skill-icon-name">${skill.name}</span>
           </div>`,
           )

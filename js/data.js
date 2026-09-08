@@ -442,5 +442,9 @@ const DATA = {
     { name: "GitHub", icon: "devicon-github-plain" },
     { name: "Postman", icon: "devicon-postman-plain" },
     { name: "Figma", icon: "devicon-figma-plain" },
+    {
+      name: "Draw.io",
+      iconUrl: "https://cdn.simpleicons.org/diagramsdotnet/94a3b8",
+    },
   ],
 };
