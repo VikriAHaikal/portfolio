@@ -243,10 +243,7 @@ function renderCertifications() {
 
       <div class="cert-card-header">
         <div class="cert-issuer-badge" style="--brand-color: ${cert.brandColor || "var(--accent)"}">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-            <circle cx="12" cy="8" r="6"/>
-            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
-          </svg>
+          ${cert.logoUrl ? `<img src="${cert.logoUrl}" alt="Logo ${cert.issuer}" class="cert-issuer-logo" />` : `<span class="cert-issuer-fallback" aria-hidden="true">${cert.issuer.slice(0, 2).toUpperCase()}</span>`}
         </div>
         <div class="cert-header-meta">
           <span class="cert-issuer">${cert.issuer}</span>

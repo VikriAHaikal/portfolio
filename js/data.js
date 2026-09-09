@@ -125,6 +125,7 @@ const DATA = {
       skills: ["React", "Frontend Development", "Web Application"],
       verifyUrl: "https://www.dicoding.com/certificates/MEPJODVNJZ3V",
       imageUrl: "public/certs/dicoding_membuat_aplikasi_web_react.jpg",
+      logoUrl: "public/media/brands/dicoding-logo.png",
       brandColor: "#2D3E50",
       category: "fullstack",
     },
@@ -136,6 +137,7 @@ const DATA = {
       skills: ["HTML", "CSS", "JavaScript", "Frontend Development"],
       verifyUrl: "https://www.dicoding.com/certificates/72ZDJNY2JZYW",
       imageUrl: "public/certs/dicoding_front-end_pemula.jpg",
+      logoUrl: "public/media/brands/dicoding-logo.png",
       brandColor: "#2D3E50",
       category: "fullstack",
     },
@@ -147,6 +149,7 @@ const DATA = {
       skills: ["JavaScript", "Backend Development", "Web Server"],
       verifyUrl: "https://www.dicoding.com/certificates/2VX30OW43XY",
       imageUrl: "public/certs/dicoding_back-end_pemula.jpg",
+      logoUrl: "public/media/brands/dicoding-logo.png",
       brandColor: "#2D3E50",
       category: "fullstack",
     },
@@ -158,6 +161,7 @@ const DATA = {
       skills: ["HTML", "CSS", "JavaScript", "Web Development"],
       verifyUrl: "https://coursera.org/share/04225b5ab52a3a4a1c666432fda6fce8",
       imageUrl: "public/certs/coursera_introduction.jpg",
+      logoUrl: "public/media/brands/coursera.png",
       brandColor: "#0056D3",
       category: "fullstack",
     },
@@ -173,6 +177,7 @@ const DATA = {
       ],
       verifyUrl: "https://coursera.org/share/4e81cffc2fa2eb92c71288783fb3e384",
       imageUrl: "public/certs/machine_learning.jpeg",
+      logoUrl: "public/media/brands/coursera.png",
       brandColor: "#0056D3",
       category: "ml",
     },
@@ -185,6 +190,7 @@ const DATA = {
       verifyUrl:
         "https://drive.google.com/file/d/1DY3E5KfrGV9YbQytwsKPZ6kyEzGdK8-1/view?usp=sharing",
       imageUrl: "public/certs/gen_ai_mahir.jpeg",
+      logoUrl: "public/media/brands/dicoding-logo.png",
       brandColor: "#2D3E50",
       category: "ml",
     },
@@ -197,6 +203,7 @@ const DATA = {
       verifyUrl:
         "https://drive.google.com/file/d/1Y_lNHK_ypCGdGQMEqAR1PcM-bS8AaPhC/view?usp=drive_link",
       imageUrl: "public/certs/gen_ai_menengah.jpeg",
+      logoUrl: "public/media/brands/dicoding-logo.png",
       brandColor: "#2D3E50",
       category: "ml",
     },
@@ -209,6 +216,7 @@ const DATA = {
       verifyUrl:
         "https://drive.google.com/file/d/1i74NfvWYFRohZ4D1bD36xZVrqnRXSHH_/view?usp=sharing",
       imageUrl: "public/certs/associate_data_analyst_bnsp.jpg",
+      logoUrl: "public/media/brands/bnsp-logo.png",
       brandColor: "#0F766E",
       category: "other",
     },
@@ -221,6 +229,7 @@ const DATA = {
       verifyUrl:
         "https://drive.google.com/file/d/1fs8Re1Yf_2sqTHLVvGKlN-4JMnLlPCbv/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_kelulusan_bangkit.jpg",
+      logoUrl: "public/media/brands/bangkit-logo.png",
       brandColor: "#34A853",
       category: "ml",
     },
@@ -237,6 +246,7 @@ const DATA = {
       verifyUrl:
         "https://drive.google.com/file/d/1hNzjZM227GiwuP6HOW_ZaaPg4LQ9cyCd/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_peserta_msib.jpg",
+      logoUrl: "public/media/brands/berdampak.png",
       brandColor: "#2563EB",
       category: "other",
     },
@@ -249,6 +259,7 @@ const DATA = {
       verifyUrl:
         "https://drive.google.com/file/d/1Sa8DZ9vtmyf9NAInw2JjzE4jsKq0LKnh/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_tot.jpg",
+      logoUrl: "public/media/brands/bem-fti.png",
       brandColor: "#7C3AED",
       category: "other",
     },
@@ -261,6 +272,7 @@ const DATA = {
       verifyUrl:
         "https://drive.google.com/file/d/1pV8NvxIW0RO1o3lZAY2cChxpz7fXhkFO/view?usp=sharing",
       imageUrl: "public/certs/sertifikat_monitor.png",
+      logoUrl: "public/media/brands/himatif.png",
       brandColor: "#EA580C",
       category: "other",
     },
