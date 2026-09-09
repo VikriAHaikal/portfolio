@@ -1989,6 +1989,9 @@ ul {
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
 }
+.cert-card[hidden] {
+  display: none;
+}
 
 .cert-preview img {
   width: 100%;
